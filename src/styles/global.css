@@ -1,3 +1,25 @@
+@import url('../../node_modules/bootstrap/dist/css/bootstrap.min.css');
+@import url('https://fonts.googleapis.com/css2?family=Spartan:wght@300;500;700&display=swap');
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer base {
+    @font-face {
+        font-family: "comexprimary";
+        font-weight: 500;
+        src: url('../fonts/HelveticaMedium.woff2') format('woff2'),
+            url('../fonts/HelveticaMedium.woff') format('woff');
+    }
+
+    @font-face {
+        font-family: "comexsecondary";
+        font-weight: 300;
+        src: url('../fonts/HelveticaUltraLight.woff2') format('woff2'),
+            url('../fonts/HelveticaUltraLight.woff') format('woff');
+    }
+}
+
+#primary {
+    min-height: 1800px;
+}

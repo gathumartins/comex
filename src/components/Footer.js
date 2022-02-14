@@ -2,7 +2,7 @@ import React from 'react';
 
 function Footer() {
     return <footer>
-        <h1 className="text-red-500">This is a footer</h1>
+        <h1 className="font-spartan">This is a footer</h1>
     </footer>;
 }
 
