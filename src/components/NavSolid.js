@@ -3,8 +3,8 @@ import { Container } from 'react-bootstrap';
 
 function NavSolid() {
     return (
-        <nav className="bg-white p-2">
-            <Container className="align-middle">
+        <nav className="bg-white py-2">
+            <Container>
                 <ul className='flex justify-around font-spartan text-black'>
                     <li className="pt-4"><a href="properties">Properties</a></li>
                     <li className="pt-4"><a href="whyComex">Why Comex</a></li>

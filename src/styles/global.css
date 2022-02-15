@@ -20,6 +20,68 @@
     }
 }
 
-#primary {
-    min-height: 1800px;
+.carousel-caption {
+    width: 100%;
+    left: 0% !important;
+    right: 0% !important;
+}
+
+.carousel-indicators [data-bs-target] {
+    width: 33% !important;
+}
+
+.carousel-indicators {
+    bottom: 80px;
+}
+
+.projectsInn {
+    min-height: 680px;
+}
+
+
+
+.projects:before {
+    content: '';
+    display: block;
+    position: absolute;
+    z-index: -1;
+    left: 0;
+    top: 0;
+    width: 42%;
+    height: 680px;
+    background: #f8a428;
+    background-size: cover;
+}
+
+@media only screen and (min-width: 992px) {
+    .carousel-indicators {
+        bottom: 80px;
+        justify-content: space-evenly !important;
+        margin-right: 8%;
+        margin-left: 8%;
+    }
+
+    .mobileHeader {
+        display: none;
+    }
+
+    .mmenu {
+        display: none;
+    }
+}
+
+@media only screen and (max-width:991px) {
+    .headerlarge {
+        display: none;
+    }
+
+    .mobileHeader {
+        background-color: #fff;
+        padding: 15px;
+    }
+
+    .projects:before {
+        width: 100%;
+        height: 433px;
+    }
 }
