@@ -5,7 +5,7 @@ function NavTrans() {
     return (
         <nav className="py-8 backdrop-blur-sm bg-white/40">
             <Container>
-                <ul className='flex justify-around lg:text-2xl'>
+                <ul className='d-flex align-items-center justify-around lg:text-2xl'>
                     <li><a href="properties" className="hover:text-comex-primary">Properties</a></li>
                     <li><a href="whyComex" className="hover:text-comex-primary">Why Comex</a></li>
                     <li><a href="/"><img src="./imgs/logo.png" alt="Comex Homes logo" className="h-24" /></a></li>
