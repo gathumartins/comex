@@ -7,7 +7,7 @@ function Testimonial() {
     return (
         <article className="relative testBack">
             <FaQuoteLeft className="absolute z-0 ml-10 mt-10 testQuote text-white" />
-            <div className="py-14 relative  testInn bg-gradient-to-br from-comex-primary/30 to-comex-primary/95 z-50">
+            <div className="py-14 relative  testInn bg-gradient-to-br from-comex-primary/30 to-comex-primary/95 z-8">
                 <Container fluid={'lg'}>
                     <section className="text-center">
                         <h1 className="text-4xl text-white mb-5">Testimonials</h1>

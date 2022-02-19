@@ -3,7 +3,7 @@ import { Container } from 'react-bootstrap';
 
 function Connect() {
     return (
-        <article className="py-14">
+        <article className="py-14 bg-white">
             <Container fluid={"lg"}>
                 <section className="text-2xl mb-4 text-center">
                     <h1>can we <span className="text-comex-primary">CONNECT?</span></h1>
@@ -14,7 +14,7 @@ function Connect() {
                             <input type="text" name="name" id="name" className="peer h-10 w-full border-b-2 border-black focus:outline-none focus:border-comex-primary placeholder-transparent" placeholder="NAME" />
                             <label htmlFor="name" className="absolute left-0 -top-3 transition-all text-comex-primary text-sm peer-placeholder-shown:text-base peer-placeholder-shown:text-black peer-placeholder-shown:top-2 peer-focus:-top-3 peer-focus:text-comex-primary peer-focus:text-sm">NAME</label>
                         </div>
-                        <div className="w-full relative">
+                        <div className="w-full mt-10 md:mt-0 relative">
                             <input type="email" name="email" id="email" className="peer h-10 w-full border-b-2 border-black focus:outline-none focus:border-comex-primary placeholder-transparent" placeholder="EMAIL" />
                             <label htmlFor="email" className="absolute left-0 -top-3 transition-all text-comex-primary text-sm peer-placeholder-shown:text-base peer-placeholder-shown:text-black peer-placeholder-shown:top-2 peer-focus:-top-3 peer-focus:text-comex-primary peer-focus:text-sm">EMAIL</label>
                         </div>

@@ -1,10 +1,11 @@
 import React from 'react';
 import Layout from '../components/Layout';
+import Connect from '../components/Connect';
 
 function whyComex() {
     return (
         <Layout>
-            <h1>This is a why comex page</h1>
+            <Connect />
         </Layout>
     );
 }

@@ -3,7 +3,7 @@ import { Container } from 'react-bootstrap';
 
 function Process() {
     return (
-        <article className="py-10">
+        <article className="py-14">
             <section>
                 <Container className="text-center mb-12 relative comexHeads">
                     <div className="comexLine z-0"></div>
@@ -56,4 +56,4 @@ function Process() {
     )
 }
 
-export default Process
+export default Process;
