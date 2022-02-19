@@ -55,13 +55,17 @@
     background-size: cover;
 }
 
+.projectImg>figcaption {
+    transition: all 5s linear;
+}
+
 .projCapBtm {
     display: none;
-    transition: all 2s ease-in-out 1s;
+    transition: all 5s linear;
 }
 
 .projectImg:hover>figcaption>.projCapBtm {
-    display: inline-block;
+    display: block;
 }
 
 .comexLine {
@@ -79,7 +83,6 @@
 
 .processInn {
     min-height: 400px;
-    min-width: 22%;
     background-color: #f8a428;
     padding: 30px 15px;
 }
@@ -100,6 +103,31 @@
 
 .processInn:nth-child(odd) h1 {
     color: #f8a428;
+}
+
+.process::-webkit-scrollbar {
+    display: none;
+}
+
+.testBack {
+    background-image: url(../../static/imgs/sliderone.jpg);
+    background-attachment: fixed;
+    background-size: cover;
+    background-position: top center;
+}
+
+.testQuote {
+    font-size: 18em;
+    z-index: 0;
+}
+
+.testCont::-webkit-scrollbar {
+    display: none;
+}
+
+/* footer */
+.logo {
+    margin-right: 0px;
 }
 
 @media only screen and (min-width: 992px) {
@@ -136,5 +164,17 @@
 
     .whyVid {
         padding: 15px;
+    }
+
+
+}
+
+@media only screen and (max-width:768px) {
+    .logo img {
+        margin: 0px auto 15px;
+    }
+
+    .copy {
+        text-align: center;
     }
 }

@@ -4,7 +4,8 @@ import Slider from "../components/Slider";
 import Project from "../components/Project"
 import WhyHome from "../components/WhyHome";
 import Process from "../components/Process";
-
+import Testimonial from "../components/Testimonial";
+import Connect from "../components/Connect";
 
 // markup
 const IndexPage = () => {
@@ -15,6 +16,8 @@ const IndexPage = () => {
         <Project />
         <WhyHome />
         <Process />
+        <Testimonial />
+        <Connect />
       </main>
     </Layout>
   )
