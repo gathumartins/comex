@@ -5,7 +5,7 @@ function Process() {
     return (
         <article className="py-14">
             <section>
-                <Container className="text-center mb-12 relative comexHeads">
+                <Container className="text-center mb-16 relative comexHeads">
                     <div className="comexLine z-0"></div>
                     <h1 className="text-4xl bg-white z-10 max-w-[400px] mx-auto">Our Process</h1>
                 </Container>

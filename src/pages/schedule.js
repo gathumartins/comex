@@ -1,15 +1,15 @@
 import React from 'react';
 import Layout from '../components/Layout';
-import MapComp from '../components/MapComp';
 import Banner from '../components/Banner';
+import Schedule from '../components/Schedule';
 
-function contactUs() {
+function schedule() {
     return (
         <Layout>
             <Banner />
-            <MapComp />
+            <Schedule />
         </Layout>
-    );
+    )
 }
 
-export default contactUs;
+export default schedule;

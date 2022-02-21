@@ -10,9 +10,9 @@ function WhyHome() {
                     <h1 className="text-xl sm:text-4xl md:text-2xl lg:text-4xl bg-white z-10 max-w-[400px] mx-auto">Why Comex <span className="text-comex-primary">Homes</span></h1>
                 </Container>
             </section>
-            <section className="grid grid-cols-1 lg:grid-cols-2 gap-4 px-5 lg:px-0">
-                <div className="whyCont lg:w-[90%] ml-0 lg:ml-[10%] text-sm font-spartan leading-7">
-                    <ul className="flex justify-between whyList text-md lg:text-lg xl:text-2xl">
+            <section className="grid grid-cols-1 lg:grid-cols-2 gap-4 py-5 vidWhy">
+                <div className="whyCont lg:w-[90%] ml-0 lg:ml-[10%] lg:px-5 text-sm font-spartan leading-7">
+                    <ul className="flex justify-between whyList text-md mb-2 lg:text-lg xl:text-2xl">
                         <li>
                             <img src="./imgs/build.png" className="mx-auto my-3 w-12" alt="Comex Homes Build Icon" />
                             <h1>WE BUILD.</h1>
@@ -44,7 +44,7 @@ function WhyHome() {
                         <a href="/whyComex" className="bg-comex-primary text-white text-md rounded-lg p-3">WHY US</a>
                     </div>
                 </div>
-                <iframe className="w-full aspect-video rounded-xl whyVid " title="Why Comex Homes Video" src="https://www.youtube-nocookie.com/embed/Vjv7MqbRvtE"></iframe>
+                <iframe className="w-full aspect-video rounded-xl" title="Why Comex Homes Video" src="https://www.youtube-nocookie.com/embed/Vjv7MqbRvtE"></iframe>
             </section>
         </article>
     )

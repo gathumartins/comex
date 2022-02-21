@@ -2,13 +2,15 @@ import React from 'react';
 import Layout from '../components/Layout';
 import Connect from '../components/Connect';
 import WhyAbout from '../components/WhyAbout';
-import Slider from '../components/Slider';
+import Banner from '../components/Banner';
+import WhyMivi from '../components/WhyMivi';
 
 function whyComex() {
     return (
         <Layout>
-            <Slider />
+            <Banner />
             <WhyAbout />
+            <WhyMivi />
             <Connect />
         </Layout>
     );

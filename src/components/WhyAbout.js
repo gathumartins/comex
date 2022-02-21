@@ -10,7 +10,7 @@ function WhyAbout() {
                     <p className="max-w-[600px] mx-auto my-3 text-md md:text-lg">We are a real estate investment company based in Nairobi, Kenya. We help people like you achieve financial independence through Affordable Amazing Apartments.</p>
                 </Container>
             </section>
-            <section className="grid grid-cols-1 lg:grid-cols-2 gap-4 px-5 lg:px-0">
+            <section className="grid grid-cols-1 lg:grid-cols-2 gap-4 vidWhy">
                 <div className="whyCont lg:w-[90%] ml-0 lg:ml-[10%] text-sm font-spartan leading-7">
                     <p>They say the biggest gift you can give your generation is a
                         good home. Well, we say the most significant gift you can give
