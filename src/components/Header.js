@@ -1,26 +1,11 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import { Offcanvas } from 'react-bootstrap';
-import NavTrans from './NavTrans';
 import NavSolid from './NavSolid';
 
 function Header() {
-    const [myHeader, setMyHeader] = useState(false);
-    const isBrowser = typeof window !== "undefined"
     const [show, setShow] = useState(false);
     const handleClose = () => setShow(false);
     const handleShow = () => setShow(true);
-    useEffect(() => {
-        if (isBrowser) {
-            const changemyHeading = () => {
-                if (window.scrollY > 80) {
-                    setMyHeader(true)
-                } else {
-                    setMyHeader(false)
-                }
-            }
-            window.addEventListener('scroll', changemyHeading);
-        }
-    }, [isBrowser])
 
     return <header className="sticky top-0 z-10">
         <div className="flex justify-between mobileHeader">
@@ -31,8 +16,8 @@ function Header() {
                 </svg>
             </button>
         </div>
-        <div className="headerlarge">
-            {myHeader ? <NavSolid /> : <NavTrans />}
+        <div className="headerlarge transition-all">
+            <NavSolid />
         </div>
         <Offcanvas show={show} onHide={handleClose} placement={`end`} className="w-full mmenu bg-comex-primary">
             <header className="flex justify-end p-3">
@@ -44,7 +29,7 @@ function Header() {
             </header>
             <Offcanvas.Body className="p-0">
                 <ul className="text-2xl text-center">
-                    <li className='p-3 order-first hover:bg-white hover:text-comex-primary'><a href="/" onClick={handleClose} className="text-uppercase">Home</a></li>
+                    <li className='p-3 hover:bg-white hover:text-comex-primary'><a href="/" onClick={handleClose} className="text-uppercase">Home</a></li>
                     <li className="p-3 hover:bg-white hover:text-comex-primary"><a href="properties" onClick={handleClose} className="text-uppercase">Properties</a></li>
                     <li className="p-3 hover:bg-white hover:text-comex-primary"><a href="whyComex" onClick={handleClose} className="text-uppercase">Why Comex</a></li>
                     <li className="p-3 hover:bg-white hover:text-comex-primary"><a href="ourProcess" onClick={handleClose} className="text-uppercase">Our Process</a></li>

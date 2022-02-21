@@ -20,6 +20,11 @@
     }
 }
 
+/* navigation */
+.scrolledNav {
+    order: 1;
+}
+
 .carousel-caption {
     width: 100%;
     left: 0% !important;
