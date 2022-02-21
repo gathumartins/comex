@@ -3,6 +3,8 @@ import { Container } from 'react-bootstrap';
 import { FaFacebookF, FaInstagram, FaTwitter, FaLinkedinIn, FaYoutube } from 'react-icons/fa';
 
 function Footer() {
+    const year = new Date;
+    const yyyy = year.getFullYear();
     return <footer className="py-14 bg-comex-primary">
         <Container fluid={"lg"}>
             <div className="md:flex justify-between footerTop">
@@ -31,7 +33,7 @@ function Footer() {
                     <li><a href="/" className="hover:text-black"><span className="hidden">YouTube</span><FaYoutube /></a></li>
                 </ul>
                 <p className="flex-grow copy text-white">Accessibility Statement<br />
-                    &copy; 2021 Comex Homes. All Rights Reserved. The property information herein is derived from various sources that may include, but not be limited to,government records</p>
+                    &copy; {yyyy} Comex Homes. All Rights Reserved. The property information herein is derived from various sources that may include, but not be limited to,government records</p>
             </div>
         </Container>
     </footer>;

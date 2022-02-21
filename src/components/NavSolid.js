@@ -6,7 +6,7 @@ function NavSolid() {
     const isBrowser = typeof window !== "undefined"
     if (isBrowser) {
         const changemyHeading = () => {
-            if (window.scrollY > 80) {
+            if (window.scrollY >= 100) {
                 setMyHeader(true)
             } else {
                 setMyHeader(false)
@@ -16,7 +16,7 @@ function NavSolid() {
     }
 
     return (
-        <nav className={myHeader ? `backdrop-blur-lg bg-white/80 py-2 transition-all` : `py-8 backdrop-blur-sm bg-white/40 shadow-lg transition-all`}>
+        <nav className={myHeader ? `backdrop-blur-lg bg-white/70 py-2 transition-all` : `py-8 backdrop-blur-sm bg-white/40 shadow-lg transition-all`}>
             <Container>
                 <ul className='d-flex align-items-center justify-around font-spartan text-black'>
                     <li><a href="properties" className="hover:text-comex-primary text-uppercase">Properties</a></li>
