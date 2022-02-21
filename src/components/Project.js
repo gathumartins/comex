@@ -7,7 +7,7 @@ function Project() {
             <Container fluid={"lg"}>
                 <div className="projectsInn grid sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-3 z-10">
                     <div className="d-flex align-items-center">
-                        <span className="text-white text-6xl md:text-5xl lg:text-5xl xl:text-6xl leading-24 font-spartan font-weight-500 text-uppercase inline-block align-middle">Our Projects</span>
+                        <span className="text-white text-4xl md:text-5xl lg:text-5xl xl:text-6xl leading-24 font-spartan font-weight-500 text-uppercase inline-block align-middle">Our Projects</span>
                     </div>
                     <figure className="relative projectImg">
                         <a href="/"><img src="./imgs/projectimg.png" className="object-cover" alt="Comex Properties Homes projects" /></a>
