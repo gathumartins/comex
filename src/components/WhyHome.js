@@ -7,7 +7,7 @@ function WhyHome() {
             <section>
                 <Container className="text-center mb-10 relative comexHeads">
                     <div className="comexLine z-0"></div>
-                    <h1 className="text-xl sm:text-4xl md:text-2xl lg:text-4xl bg-white z-10 max-w-[400px] mx-auto">Why Comex <span className="text-comex-primary">Homes</span></h1>
+                    <h1 className="text-3xl sm:text-4xl md:text-2xl lg:text-4xl bg-white z-10 w-[240px] md:max-w-[400px] mx-auto">Why Comex <span className="text-comex-primary">Homes</span></h1>
                 </Container>
             </section>
             <section className="grid grid-cols-1 lg:grid-cols-2 gap-4 py-5 vidWhy">
