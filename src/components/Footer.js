@@ -1,5 +1,6 @@
 import React from 'react';
 import { Container } from 'react-bootstrap';
+import footlogo from '../../static/imgs/footlogo.png';
 import { FaFacebookF, FaInstagram, FaTwitter, FaLinkedinIn, FaYoutube } from 'react-icons/fa';
 
 function Footer() {
@@ -9,7 +10,7 @@ function Footer() {
         <Container fluid={"lg"}>
             <div className="md:flex justify-between footerTop">
                 <div className="w-[100%] md:max-w-[250px] logo">
-                    <img src="./imgs/footlogo.png" alt="comex footer logo" className="h-16" />
+                    <img src={footlogo} alt="comex footer logo" className="h-16" />
                 </div>
                 <div className="flex-grow">
                     <ul className="sm:flex text-center sm:text-left justify-around gap-4 max-w-[700px] ml-auto">

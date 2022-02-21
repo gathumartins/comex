@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { Offcanvas } from 'react-bootstrap';
 import NavSolid from './NavSolid';
+import logo from '../../static/imgs/logo.png';
 
 function Header() {
     const [show, setShow] = useState(false);
@@ -9,7 +10,7 @@ function Header() {
 
     return <header className="sticky top-0 z-10">
         <div className="flex justify-between mobileHeader">
-            <img src="./imgs/logo.png" alt="comex mobile logo" className="h-10" />
+            <img src={logo} alt="comex mobile logo" className="h-10" />
             <button className="menu" onClick={handleShow}>
                 <svg xmlns="http://www.w3.org/2000/svg" className="h-8 w-8 hover:text-comex-primary" viewBox="0 0 20 20" fill="currentColor">
                     <path fillRule="evenodd" d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM9 15a1 1 0 011-1h6a1 1 0 110 2h-6a1 1 0 01-1-1z" clipRule="evenodd" />
@@ -17,7 +18,7 @@ function Header() {
             </button>
         </div>
         <div className="headerlarge transition-all">
-            <NavSolid />
+            <NavSolid logo={logo}/>
         </div>
         <Offcanvas show={show} onHide={handleClose} placement={`end`} className="w-full mmenu bg-comex-primary">
             <header className="flex justify-end p-3">
