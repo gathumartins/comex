@@ -39,10 +39,6 @@
     bottom: 80px;
 }
 
-.projectsInn {
-    min-height: 680px;
-}
-
 .projectsInn>div {
     padding: 0px !important;
 }
@@ -54,13 +50,13 @@
     z-index: -1;
     left: 0;
     top: 0;
-    width: 42%;
+    width: 48%;
     height: 680px;
     background: #f8a428;
     background-size: cover;
 }
 
-.projectImg>figcaption {
+.projectImg>span {
     transition: all 5s linear;
 }
 
@@ -69,7 +65,7 @@
     transition: all 5s linear;
 }
 
-.projectImg:hover>figcaption>.projCapBtm {
+.projectImg:hover>span>.projCapBtm {
     display: block;
 }
 
@@ -89,7 +85,7 @@
 .processInn {
     min-height: 400px;
     background-color: #f8a428;
-    padding: 30px 15px;
+    padding: 60px 15px 30px;
 }
 
 .processInn h1 {

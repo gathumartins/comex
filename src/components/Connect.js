@@ -5,7 +5,7 @@ function Connect() {
     return (
         <article className="py-14 bg-white">
             <Container fluid={"lg"}>
-                <section className="text-2xl mb-4 text-center">
+                <section className="text-2xl mb-4 relative text-center">
                     <h1>can we <span className="text-comex-primary">CONNECT?</span></h1>
                 </section>
                 <form action="" className="md:max-w-[1200px] mx-auto">
