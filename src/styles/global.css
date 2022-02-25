@@ -125,7 +125,47 @@
 .testCont::-webkit-scrollbar {
     display: none;
 }
-
+/* contact page */
+.contact-heading{
+    display: flex;
+    flex-flow: row wrap;
+    align-items: center;
+    justify-content: flex-start;
+    margin: 0 0 75px;
+    padding: 90px 0 0;
+}
+.contact-heading>h1>strong{
+    min-width:280px;
+    display: block;
+    font-size: 54px;
+    font-weight: 400;
+    color: #fff;
+    text-transform: uppercase;
+}
+.contact-heading>h1>span{
+    min-width:230px;
+        font-size: 28px;
+        line-height: 1.5;
+        text-transform: uppercase;
+        letter-spacing: 0.010em;
+        color: #fff;
+        display: inline-block;
+        margin: 10px 0 0;
+        position: relative;
+        text-align: right;
+}
+.contact-heading > h1 > span::after{
+    content: '';
+    display: block;
+    height: 2px;
+    width: 180px;
+    position: absolute;
+    text-align: right;
+    top: 0;
+    bottom: 0;
+    margin: auto 0;
+    background: white;
+}
 /* footer */
 .logo {
     margin-right: 0px;
@@ -165,6 +205,12 @@
 
     .vidWhy {
         padding: 20px;
+    }
+    .contBtm{
+        padding-bottom: 30px;
+    }
+    .contLogo{
+        margin: 30px auto;
     }
 }
 

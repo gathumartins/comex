@@ -27,6 +27,7 @@ function Footer() {
                     </div>
                 </div>
                 <div className="md:flex justify-between md:flex-row-reverse gap-4 mt-4 footerBtm">
+
                     <ul className="flex justify-between mx-auto my-4 w-[250px] text-white">
                         <li><a href="/" className="hover:text-black"><span className="hidden">Facebook</span><FaFacebookF /></a></li>
                         <li><a href="/" className="hover:text-black"><span className="hidden">Instagram</span><FaInstagram /></a></li>
