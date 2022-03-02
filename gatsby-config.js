@@ -8,7 +8,7 @@ module.exports = {
     {
       resolve: 'gatsby-source-wordpress',
       options: {
-        "url": "https://comexhomes.ke/graphql"
+        "url": "https://test.comexhomes.ke/graphql"
       }
     },
     // {
