@@ -1,12 +1,32 @@
 import React from 'react';
+import Carousel from "react-multi-carousel";
+import "react-multi-carousel/lib/styles.css";
 import { Container } from 'react-bootstrap';
 import Layout from '../components/Layout';
 import Banner from '../components/Banner';
 import Connect from '../components/Connect';
 import banner from '../../static/imgs/process.jpg';
+import Property from '../components/Property';
 
 
 function ourProcess() {
+    const responsive = {
+        desktop: {
+            breakpoint: { max: 3000, min: 1024 },
+            items: 3,
+            slidesToSlide: 3 // optional, default to 1.
+        },
+        tablet: {
+            breakpoint: { max: 1024, min: 464 },
+            items: 2,
+            slidesToSlide: 2 // optional, default to 1.
+        },
+        mobile: {
+            breakpoint: { max: 464, min: 0 },
+            items: 1,
+            slidesToSlide: 1 // optional, default to 1.
+        }
+    };
     return (
         <Layout>
             <Banner banner={banner}/>
@@ -65,6 +85,41 @@ function ourProcess() {
                             </div>
                         </div>
                     </div>
+                </Container>
+            </section>
+            <section className="py-14">
+                <header className="py-10">
+                    <Container className="text-center relative comexHeads">
+                        <h1 className="text-3xl sm:text-4xl md:text-2xl lg:text-4xl max-w-[400px] mx-auto">Featured Projects</h1>
+                    </Container>
+                </header>
+                <Container fluid={"lg"}>
+                    <Carousel swipeable={false}
+                        draggable={false}
+                        showDots={true}
+                        responsive={responsive}>
+                       
+                    <div className="px-5">
+                            <Property />
+                    </div>
+
+                        <div className="px-5">
+                            <Property />
+                        </div>
+
+                        <div className="px-5">
+                            <Property />
+                        </div>
+
+                        <div className="px-5">
+                            <Property />
+                        </div>
+                    </Carousel>
+                    
+                </Container>
+                <Container className="text-center mt-12 relative comexHeads">
+                    <div className="comexLinetwo z-0"></div>
+                    <a className="text-md text-white bg-comex-primary color:white z-10 max-w-[300px] mx-auto p-2 rounded mt-3">View all Property</a>
                 </Container>
             </section>
             <Connect />

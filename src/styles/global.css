@@ -81,7 +81,14 @@
 .whyList li:nth-child(odd) {
     color: #f8a428;
 }
-
+.comexLinetwo{
+     position: absolute;
+     margin-top: 10px;
+     height: 1px;
+     width: 100%;
+     z-index: -1;
+     background: #f8a428;
+}
 .processInn {
     min-height: 400px;
     background-color: #f8a428;
