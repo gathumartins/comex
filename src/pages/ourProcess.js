@@ -13,18 +13,15 @@ function ourProcess() {
     const responsive = {
         desktop: {
             breakpoint: { max: 3000, min: 1024 },
-            items: 3,
-            slidesToSlide: 3 // optional, default to 1.
+            items: 3
         },
         tablet: {
             breakpoint: { max: 1024, min: 464 },
-            items: 2,
-            slidesToSlide: 2 // optional, default to 1.
+            items: 2
         },
         mobile: {
             breakpoint: { max: 464, min: 0 },
-            items: 1,
-            slidesToSlide: 1 // optional, default to 1.
+            items: 1
         }
     };
     return (
@@ -45,7 +42,7 @@ function ourProcess() {
                             <div className="proInner">
                                 <h1 className="text-3xl">Selection</h1>
                                 <p className="text-md">Select the project you want to invest in, number of units and typology of the units.</p>
-                                <a href="/" className="viewLink">Schedule Viewing</a>
+                                <a href="/schedule" className="viewLink">Schedule Viewing</a>
                             </div>
                       </div>
                     </div>
@@ -94,24 +91,36 @@ function ourProcess() {
                     </Container>
                 </header>
                 <Container fluid={"lg"}>
-                    <Carousel swipeable={false}
+                    <Carousel 
+                        swipeable={false}
                         draggable={false}
                         showDots={true}
-                        responsive={responsive}>
+                        responsive={responsive}
+                        infinite={true}
+                        autoPlay={true}
+                        autoPlaySpeed={3000}
+                        keyBoardControl={true}
+                        customTransition="all .5"
+                        transitionDuration={1000}
+                        containerClass="carousel-container"
+                        removeArrowOnDeviceType={["tablet", "mobile"]}
+                        dotListClass="custom-dot-list-style"
+                        itemClass="carousel-item-padding-40-px"
+                     className="py-4">
                        
-                    <div className="px-5">
+                    <div className="px-2">
                             <Property />
                     </div>
 
-                        <div className="px-5">
+                        <div className="px-2">
                             <Property />
                         </div>
 
-                        <div className="px-5">
+                        <div className="px-2">
                             <Property />
                         </div>
 
-                        <div className="px-5">
+                        <div className="px-2">
                             <Property />
                         </div>
                     </Carousel>
@@ -119,7 +128,7 @@ function ourProcess() {
                 </Container>
                 <Container className="text-center mt-12 relative comexHeads">
                     <div className="comexLinetwo z-0"></div>
-                    <a className="text-md text-white bg-comex-primary color:white z-10 max-w-[300px] mx-auto p-2 rounded mt-3">View all Property</a>
+                    <a href="/properties" className="text-md text-white bg-comex-primary color:white z-10 max-w-[300px] mx-auto p-2 rounded">View all Property</a>
                 </Container>
             </section>
             <Connect />
