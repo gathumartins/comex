@@ -13,7 +13,7 @@ function Slider() {
                 <Carousel.Caption>
                     <Container className="lg:flex justify-around text-comex-primary">
                         <h3 className="text-md md:text-2xl lg:text-3xl xl:text-4xl flex-grow lg:text-left lg:ml-12">#1 REAL ESTATE TEAM IN THE NATION</h3>
-                        <p className="text-sm md:text-xl lg:w-[250px] lg:text-left lg:mr-12">RANKED BY REAL TRENDS FEATURED IN KENYA.</p>
+                        <p className="text-sm md:text-xl lg:w-[300px] lg:text-left lg:mr-12">RANKED BY REAL TRENDS FEATURED IN KENYA.</p>
                     </Container>
                 </Carousel.Caption>
             </Carousel.Item>
@@ -27,7 +27,7 @@ function Slider() {
                 <Carousel.Caption>
                     <Container className="lg:flex justify-around text-comex-primary">
                         <h3 className="text-md md:text-2xl lg:text-3xl xl:text-4xl flex-grow lg:text-left lg:ml-12">#1 REAL ESTATE TEAM IN THE NATION</h3>
-                        <p className="text-sm md:text-xl lg:w-[250px] lg:text-left lg:mr-12">RANKED BY REAL TRENDS FEATURED IN KENYA.</p>
+                        <p className="text-sm md:text-xl lg:w-[300px] lg:text-left lg:mr-12">RANKED BY REAL TRENDS FEATURED IN KENYA.</p>
                     </Container>
                 </Carousel.Caption>
             </Carousel.Item>
@@ -41,7 +41,7 @@ function Slider() {
                 <Carousel.Caption>
                     <Container className="lg:flex justify-around text-comex-primary">
                         <h3 className="text-md md:text-2xl lg:text-3xl xl:text-4xl flex-grow lg:text-left lg:ml-12">#1 REAL ESTATE TEAM IN THE NATION</h3>
-                        <p className="text-sm md:text-xl lg:w-[250px] lg:text-left lg:mr-12">RANKED BY REAL TRENDS FEATURED IN KENYA.</p>
+                        <p className="text-sm md:text-xl lg:w-[300px] lg:text-left lg:mr-12">RANKED BY REAL TRENDS FEATURED IN KENYA.</p>
                     </Container>
                 </Carousel.Caption>
             </Carousel.Item>
