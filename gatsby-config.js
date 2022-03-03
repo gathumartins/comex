@@ -11,12 +11,12 @@ module.exports = {
         "url": "https://test.comexhomes.ke/graphql"
       }
     },
-    // {
-    //   resolve: 'gatsby-plugin-google-analytics',
-    //   options: {
-    //     "trackingId": ""
-    //   }
-    // }, 
+    {
+      resolve: 'gatsby-plugin-google-analytics',
+      options: {
+        "trackingId": "G-KN7G670PSF"
+      }
+    }, 
     "gatsby-plugin-image", "gatsby-plugin-react-helmet", "gatsby-plugin-sitemap", {
       resolve: 'gatsby-plugin-manifest',
       options: {
