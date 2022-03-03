@@ -291,6 +291,31 @@ background-size: cover;
 .similarProp::-webkit-scrollbar {
     display: none;
 }
+.propRight ul li{
+    color: #eee;
+        font-size: 18px;
+        letter-spacing: 0.025em;
+        text-transform: capitalize;
+}
+.propRight ul li span{
+    color: #fff;
+}
+.propRight a{
+    margin-top:15px;
+    padding:10px 15px;
+    border: 2px solid transparent;
+        display: inline-block;
+        max-width: 300px;
+        color: #fff;
+        font-family: 'Spartan';
+        font-size: 14px;
+        font-weight: 700;
+        letter-spacing: 0.025em;
+        text-transform: uppercase
+}
+.propRight a:hover{
+border-color: #fff;
+}
 /* footer */
 .logo {
     margin-right: 0px;
@@ -318,6 +343,7 @@ background-size: cover;
     .propRight{
         min-width: 600px;
         z-index: 10;
+        padding: 55px;
     }
     .propLeft{
         padding: 0 95px 0 64px;
@@ -399,4 +425,7 @@ background-size: cover;
     .similarProp>div {
         min-width: 300px;
     }
+     .propRight{
+         padding:55px 20px;
+     }
 }

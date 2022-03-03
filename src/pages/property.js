@@ -34,7 +34,21 @@ function property() {
       </div>
       </div>
     </Container>
-    <div className="propRight min-h-[300px] bg-comex-primary"></div>
+    <div className="propRight min-h-[300px] bg-comex-primary text-white">
+          <h1 className="text-4xl mb-3">KES: 990,000</h1>
+          <ul className="leading-2">
+            <li>Listing ID: <span>A11048073</span></li>
+            <li>Beds: <span>8</span></li>
+            <li>Baths: <span>7</span></li>
+            <li>Living Area Sq.Ft.: <span>6,458</span></li>
+            <li>Lot Square Feet: <span>13,072</span></li>
+            <li>Property Type: <span>Residential</span></li>
+            <li>Property Sub Type: <span>Single Family Residence</span></li>
+            <li>Subdivision: <span>BEACH VIEW SUB</span></li>
+            <li>Waterfront: <span>Yes</span></li>
+          </ul>
+          <a href="/"> Virtual Tour</a>
+    </div>
     </section>
     <section className="pt-14">
         <Container className="text-center mb-16 relative comexHeads">
