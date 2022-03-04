@@ -15,7 +15,7 @@ function MapComp() {
     return (
         <div className="w-full h-[450px]">
             <GoogleMapReact
-                bootstrapURLKeys={{ key:'AIzaSyAqaBzO7-VcNfaHGj2D2eZ35B9WIBnqKsk'}}
+                bootstrapURLKeys={{ key:'AIzaSyD5sU4cY1RY-wwg5W4TzLm0cBxakby6Giw'}}
             defaultCenter={coords}
             center={coords}
             defaultZoom={15}
