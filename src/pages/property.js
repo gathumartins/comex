@@ -9,7 +9,7 @@ import Property from '../components/Property';
 import {EmailShareButton, FacebookShareButton, LinkedinShareButton, TwitterShareButton, WhatsappShareButton} from "react-share";
 import { HiMail} from 'react-icons/hi';
 import { FaFacebookF, FaLinkedinIn, FaTwitter, FaWhatsapp } from 'react-icons/fa';
-import { photos } from "./photo";
+import { photos } from "../data/photo";
 import PropertyGallery from '../components/PropertyGallery';
 
 function property() {
