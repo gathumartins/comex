@@ -316,6 +316,10 @@ background-size: cover;
 .propRight a:hover{
 border-color: #fff;
 }
+/* gallery */
+.css-zjq1i3{
+    margin: 0 auto;
+}
 /* footer */
 .logo {
     margin-right: 0px;
@@ -342,7 +346,7 @@ border-color: #fff;
     }
     .propRight{
         min-width: 600px;
-        z-index: 10;
+        z-index: 8;
         padding: 55px;
     }
     .propLeft{

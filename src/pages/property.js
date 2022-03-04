@@ -1,5 +1,5 @@
 import React from 'react';
-import { Container} from 'react-bootstrap';
+import { Container } from 'react-bootstrap';
 import Layout from '../components/Layout';
 import Banner from '../components/Banner';
 import Connect from '../components/Connect';
@@ -9,6 +9,8 @@ import Property from '../components/Property';
 import {EmailShareButton, FacebookShareButton, LinkedinShareButton, TwitterShareButton, WhatsappShareButton} from "react-share";
 import { HiMail} from 'react-icons/hi';
 import { FaFacebookF, FaLinkedinIn, FaTwitter, FaWhatsapp } from 'react-icons/fa';
+import { photos } from "./photo";
+import PropertyGallery from '../components/PropertyGallery';
 
 function property() {
   return (
@@ -50,6 +52,9 @@ function property() {
           <a href="/"> Virtual Tour</a>
     </div>
     </section>
+    <Container fluid={"lg"} className="pt-14">
+        <PropertyGallery photos={photos} />
+    </Container>
     <section className="pt-14">
         <Container className="text-center mb-16 relative comexHeads">
           <div className="comexLine z-0"></div>
