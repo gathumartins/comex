@@ -147,6 +147,7 @@ p{
 }
 .contact-heading>h1>strong{
     min-width:280px;
+    position: relative;
     display: block;
     font-size: 54px;
     font-weight: 400;
@@ -176,6 +177,13 @@ p{
     bottom: 0;
     margin: auto 0;
     background: white;
+}
+.specHeading>h1>span{
+    min-width: 270px;
+    text-align: right;
+}
+.specHeading >h1>span::after {
+width: 130px;
 }
 /* process page */
 .processMain{
@@ -320,6 +328,25 @@ border-color: #fff;
 .css-zjq1i3{
     margin: 0 auto;
 }
+/* search widget */
+.searchCont{
+    min-height:400px;
+}
+.searchCont:before{
+    content: '';
+    display: block;
+    position: absolute;
+    z-index: 0;
+    left: 0;
+    top: 0;
+    width: 40%;
+    height: 350px;
+    background:#f8a428;
+    background-size: cover;
+}
+.searchRight{
+    padding: 3.75vw 2.8125vw;
+}
 /* footer */
 .logo {
     margin-right: 0px;
@@ -371,6 +398,9 @@ border-color: #fff;
         top: 0;
         right:0;
     }
+    .searchLeft{
+        max-width: 500px;
+    }
 }
 
 @media only screen and (max-width:991px) {
@@ -396,6 +426,9 @@ border-color: #fff;
     }
     .contLogo{
         margin: 30px auto;
+    }
+    .searchCont:before{
+        width: 100%;
     }
 }
 @media (min-width: 768px) {
