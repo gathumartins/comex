@@ -4,10 +4,11 @@ import { Container } from 'react-bootstrap';
 
 function NavSolid({logo}) {
     const [myHeader, setMyHeader] = useState(false);
-    const isBrowser = typeof window !== "undefined"
+    const isBrowser = typeof window !== "undefined";
+    const navTrans = 70;
     if (isBrowser) {
         const changemyHeading = () => {
-            if (window.scrollY >= 30) {
+            if (window.scrollY > navTrans) {
                 setMyHeader(true)
             } else {
                 setMyHeader(false)

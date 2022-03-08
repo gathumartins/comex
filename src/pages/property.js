@@ -22,7 +22,7 @@ function property() {
       <div className="propBtm md:flex justify-between gap-6">
       <div className="propLinks w-[100%] md:w-[50%] py-7">
           <a href="/">Request More Info</a>
-          <a href="/">Schedule a Showing</a>
+          <a href="schedule">Schedule a Showing</a>
       </div>
       <div className="propShare w-[100%]  md:w-[50%] p-7">
       <h3>Share this Listing</h3>
