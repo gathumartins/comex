@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { Link } from "gatsby";
 import { Offcanvas } from 'react-bootstrap';
 import NavSolid from './NavSolid';
 import logo from '../../static/imgs/logo.png';
@@ -30,11 +31,11 @@ function Header() {
             </header>
             <Offcanvas.Body className="p-0">
                 <ul className="text-2xl text-center">
-                    <li className='p-3 hover:bg-white hover:text-comex-primary'><a href="/" onClick={handleClose} className="text-uppercase">Home</a></li>
-                    <li className="p-3 hover:bg-white hover:text-comex-primary"><a href="properties" onClick={handleClose} className="text-uppercase">Properties</a></li>
-                    <li className="p-3 hover:bg-white hover:text-comex-primary"><a href="whyComex" onClick={handleClose} className="text-uppercase">Why Comex</a></li>
-                    <li className="p-3 hover:bg-white hover:text-comex-primary"><a href="ourProcess" onClick={handleClose} className="text-uppercase">Our Process</a></li>
-                    <li className="p-3 hover:bg-white hover:text-comex-primary"><a href="contactUs" onClick={handleClose} className="text-uppercase">Contact Us</a></li>
+                    <li className='p-3 hover:bg-white hover:text-comex-primary'><Link href="/" onClick={handleClose} className="text-uppercase hover:text-comex-primary">Home</Link></li>
+                    <li className="p-3 hover:bg-white hover:text-comex-primary"><Link href="/properties" onClick={handleClose} className="text-uppercase hover:text-comex-primary">Properties</Link></li>
+                    <li className="p-3 hover:bg-white hover:text-comex-primary"><Link href="/whyComex" onClick={handleClose} className="text-uppercase hover:text-comex-primary">Why Comex</Link></li>
+                    <li className="p-3 hover:bg-white hover:text-comex-primary"><Link href="/ourProcess" onClick={handleClose} className="text-uppercase hover:text-comex-primary">Our Process</Link></li>
+                    <li className="p-3 hover:bg-white hover:text-comex-primary"><Link href="/contactUs" onClick={handleClose} className="text-uppercase hover:text-comex-primary">Contact Us</Link></li>
                 </ul>
             </Offcanvas.Body>
         </Offcanvas>

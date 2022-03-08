@@ -1,4 +1,5 @@
 import React from 'react';
+import {Link} from 'gatsby';
 import { Container } from 'react-bootstrap';
 import Layout from '../components/Layout';
 import Banner from '../components/Banner';
@@ -13,6 +14,12 @@ import { photos } from "../data/photo";
 import PropertyGallery from '../components/PropertyGallery';
 
 function property() {
+  const isBrowser = typeof window !== "undefined";
+  let ShareLink;
+  if(isBrowser) {
+    ShareLink = window.location.href;
+    console.log(ShareLink);
+  }
   return (
     <Layout>
     <Banner banner={banner}/>
@@ -21,17 +28,17 @@ function property() {
       <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quia ipsum sit est, repudiandae fugiat quaerat quis dignissimos nostrum error natus voluptates saepe. Eligendi repellendus, illo atque consequatur dolorem odit praesentium vero animi eius, corrupti fugiat maiores autem consequuntur obcaecati sit, officiis possimus debitis iusto. Dicta, quis ad? Consequatur hic dignissimos facilis nihil aliquam quidem itaque modi voluptatum maxime nemo? Excepturi nesciunt, quibusdam nostrum itaque illum dolorem dolor inventore deleniti aperiam! Voluptas sapiente eaque laudantium culpa, et unde in non fugit atque at modi facilis soluta saepe provident reiciendis qui mollitia nemo fuga? Porro exercitationem fuga amet nam ut dolore. Suscipit.</p>
       <div className="propBtm md:flex justify-between gap-6">
       <div className="propLinks w-[100%] md:w-[50%] py-7">
-          <a href="/">Request More Info</a>
-          <a href="schedule">Schedule a Showing</a>
+              <Link to="/contactUs">Request More Info</Link>
+          <Link to="/schedule">Schedule a Showing</Link>
       </div>
       <div className="propShare w-[100%]  md:w-[50%] p-7">
       <h3>Share this Listing</h3>
       <ul className="flex justify-between gap-2 max-w-[250px] my-3">
-                <li><EmailShareButton url={'/'}><HiMail className="w-6 h-6"/></EmailShareButton></li>
-                <li><FacebookShareButton url={'/'}><FaFacebookF className="w-6 h-6"/></FacebookShareButton></li>
-                <li><LinkedinShareButton url={'/'}><FaLinkedinIn className="w-6 h-6"/></LinkedinShareButton></li>
-                <li><TwitterShareButton  url={'/'}><FaTwitter className="w-6 h-6"/></TwitterShareButton></li>
-                <li><WhatsappShareButton url={'/'}><FaWhatsapp className="w-6 h-6"/></WhatsappShareButton></li>
+                <li><EmailShareButton url={ShareLink}><HiMail className="w-6 h-6"/></EmailShareButton></li>
+                <li><FacebookShareButton url={ShareLink}><FaFacebookF className="w-6 h-6"/></FacebookShareButton></li>
+                <li><LinkedinShareButton url={ShareLink}><FaLinkedinIn className="w-6 h-6"/></LinkedinShareButton></li>
+                <li><TwitterShareButton  url={ShareLink}><FaTwitter className="w-6 h-6"/></TwitterShareButton></li>
+                <li><WhatsappShareButton url={ShareLink}><FaWhatsapp className="w-6 h-6"/></WhatsappShareButton></li>
       </ul>
       </div>
       </div>

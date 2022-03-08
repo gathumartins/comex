@@ -1,4 +1,5 @@
 import React from 'react';
+import {Link} from 'gatsby';
 import Carousel from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
 import { Container } from 'react-bootstrap';
@@ -42,7 +43,7 @@ function ourProcess() {
                             <div className="proInner">
                                 <h1 className="text-3xl">Selection</h1>
                                 <p className="text-md">Select the project you want to invest in, number of units and typology of the units.</p>
-                                <a href="/schedule" className="viewLink">Schedule Viewing</a>
+                                <Link to="/schedule" className="viewLink">Schedule Viewing</Link>
                             </div>
                       </div>
                     </div>
@@ -54,7 +55,7 @@ function ourProcess() {
                             <div className="w-full">
                                 <h1 className="text-3xl">Payment</h1>
                                 <p className="text-md">Choose the best payment plan for you. Pay the 20% deposit and start paying in installments.</p>
-                                <a href="/" className="viewLink">Schedule Viewing</a>
+                                <Link to="/schedule" className="viewLink">Schedule Viewing</Link>
                             </div>
                         </div>
                     </div>
@@ -66,7 +67,7 @@ function ourProcess() {
                             <div className="proInner">
                                 <h1 className="text-3xl">Update</h1>
                                 <p className="text-md">You are added to an email list where you’ll receive a weekly site update of the project until completion.</p>
-                                <a href="/" className="viewLink">Schedule Viewing</a>
+                                <Link to="/schedule" className="viewLink">Schedule Viewing</Link>
                             </div>
                         </div>
                     </div>
@@ -78,7 +79,7 @@ function ourProcess() {
                             <div className="proInner">
                                 <h1 className="text-3xl">Handover</h1>
                                 <p className="text-md">After completion of project, we host a Grand Opening ceremony celebrating the completion and handover the unit to you.</p>
-                                <a href="/" className="viewLink">Schedule Viewing</a>
+                                <Link to="/schedule" className="viewLink">Schedule Viewing</Link>
                             </div>
                         </div>
                     </div>

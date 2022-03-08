@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from "gatsby";
 import { Container } from 'react-bootstrap';
 import footlogo from '../../static/imgs/footlogo.png';
 import { FaFacebookF, FaInstagram, FaTwitter, FaLinkedinIn, FaYoutube } from 'react-icons/fa';
@@ -15,10 +16,10 @@ function Footer() {
                     </div>
                     <div className="flex-grow">
                         <ul className="sm:flex text-center sm:text-left justify-around gap-4 max-w-[700px] ml-auto">
-                            <li><a href="/" className="hover:text-white">PROPERTIES</a></li>
-                            <li><a href="/" className="hover:text-white">WHY COMEX</a></li>
-                            <li><a href="/" className="hover:text-white">OUR PROCESS</a></li>
-                            <li><a href="/" className="hover:text-white">CONTACT US</a></li>
+                            <li><Link to="/properties" className="hover:text-white">PROPERTIES</Link></li>
+                            <li><Link to="/whyComex" className="hover:text-white">WHY COMEX</Link></li>
+                            <li><Link to="/ourProcess" className="hover:text-white">OUR PROCESS</Link></li>
+                            <li><Link to="/contactUs" className="hover:text-white">CONTACT US</Link></li>
                         </ul>
                         <ul className="flex justify-start gap-4 max-w-[700px] ml-auto pl-7 mt-3 text-white">
                             <li>Email : <a className="hover:text-black" href="mailto:buy@comexhomes.com">buy@comexhomes.com</a></li>
@@ -29,11 +30,11 @@ function Footer() {
                 <div className="md:flex justify-between md:flex-row-reverse gap-4 mt-4 footerBtm">
 
                     <ul className="flex justify-between mx-auto my-4 w-[250px] text-white">
-                        <li><a href="/" className="hover:text-black"><span className="hidden">Facebook</span><FaFacebookF /></a></li>
-                        <li><a href="/" className="hover:text-black"><span className="hidden">Instagram</span><FaInstagram /></a></li>
-                        <li><a href="/" className="hover:text-black"><span className="hidden">Twitter</span><FaTwitter /></a></li>
-                        <li><a href="/" className="hover:text-black"><span className="hidden">Linkedin</span><FaLinkedinIn /></a></li>
-                        <li><a href="/" className="hover:text-black"><span className="hidden">YouTube</span><FaYoutube /></a></li>
+                        <li><a href="https://www.facebook.com/comexhomes" target="_blank" className="hover:text-black"><span className="hidden">Facebook</span><FaFacebookF /></a></li>
+                        <li><a href="https://www.instagram.com/comexhomeske/" target="_blank" className="hover:text-black"><span className="hidden">Instagram</span><FaInstagram /></a></li>
+                        <li><a href="https://twitter.com/ComexHomes" target="_blank" className="hover:text-black"><span className="hidden">Twitter</span><FaTwitter /></a></li>
+                        <li><a href="https://www.linkedin.com/company/comexhomes" target="_blank" className="hover:text-black"><span className="hidden">Linkedin</span><FaLinkedinIn /></a></li>
+                        <li><a href="https://www.youtube.com/channel/UC6Dm0R805fzKUROf96u-VpQ" target="_blank" className="hover:text-black"><span className="hidden">YouTube</span><FaYoutube /></a></li>
                     </ul>
                     <p className="flex-grow copy text-white">Accessibility Statement<br />
                         &copy; {yyyy} Comex Homes. All Rights Reserved. The property information herein is derived from various sources that may include, but not be limited to,government records</p>
