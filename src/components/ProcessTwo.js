@@ -25,7 +25,7 @@ function ProcessTwo() {
       <section className="relative processMain">
           <Container fluid={"lg"} className="gap-4 processTwo">
               {
-                  processes?.map((process) =>
+                  processes.map((process) =>
                       <div key={process.id} className="processTwoInn">
                           <div className="h-full">
                               <div className="text-center inline-block">
