@@ -6,7 +6,7 @@ import Banner from '../components/Banner';
 import Connect from '../components/Connect';
 import banner from '../../static/imgs/property.jpg';
 import MapComp from '../components/MapComp';
-import Property from '../components/Property';
+// import Property from '../components/Property';
 import {EmailShareButton, FacebookShareButton, LinkedinShareButton, TwitterShareButton, WhatsappShareButton} from "react-share";
 import { HiMail} from 'react-icons/hi';
 import { FaFacebookF, FaLinkedinIn, FaTwitter, FaWhatsapp } from 'react-icons/fa';
@@ -74,12 +74,12 @@ function property() {
           <div className="comexLine z-0"></div>
           <h1 className="text-3xl sm:text-4xl md:text-2xl lg:text-4xl bg-white z-10 max-w-[240px] md:max-w-[400px] mx-auto">Similar Listings</h1>
         </Container>
-        <Container fluid={"lg"} className="flex justify-between gap-4 overflow-y-hidden overflow-x-scroll snap-x similarProp">
+        {/* <Container fluid={"lg"} className="flex justify-between gap-4 overflow-y-hidden overflow-x-scroll snap-x similarProp">
           <Property />
           <Property />
           <Property />
           <Property />
-        </Container>
+        </Container> */}
       </section>
     <Connect />
     </Layout>

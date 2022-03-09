@@ -34,7 +34,7 @@ const indexpage = ({data}) => {
 
 export const query = graphql `
 query{
-        allWpCustomProcess {
+        allWpCustomProcess(sort: {order: DESC, fields: date}){
             nodes {
             content
             id

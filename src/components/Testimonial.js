@@ -7,7 +7,7 @@ import Test from './Test';
 function Testimonial() {
     const data = useStaticQuery(graphql`
        {
-        testimonies:allWpTestimony {
+        testimonies:allWpTestimony{
             nodes {
             content
             title

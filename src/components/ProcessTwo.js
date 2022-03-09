@@ -5,7 +5,7 @@ import { Link, useStaticQuery, graphql } from 'gatsby';
 function ProcessTwo() {
     const process = useStaticQuery(graphql`
             {
-        allWpCustomProcess {
+        allWpCustomProcess{
             nodes {
             content
             id
