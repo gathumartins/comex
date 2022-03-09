@@ -29,7 +29,7 @@ function Testimonial() {
                         <h1 className="text-4xl text-white mb-5">Testimonials</h1>
                     </section>
                     <section className="flex justify-between gap-4 overflow-y-hidden overflow-x-scroll snap-x min-h-[300px] testCont">
-                    {Testimonials?.map((testimony) => 
+                    {Testimonials.map((testimony) => 
                         <Test key={testimony.id} rating={testimony.testimonial.rating} title={testimony.title} content={testimony.content}/>
                         
                         )
