@@ -22,7 +22,7 @@ function Footer() {
                             <li><Link to="/contactUs" className="hover:text-white">CONTACT US</Link></li>
                         </ul>
                         <ul className="flex justify-start gap-4 max-w-[700px] ml-auto pl-7 mt-3 text-white">
-                            <li>Email : <a className="hover:text-black" href="mailto:buy@comexhomes.com">buy@comexhomes.com</a></li>
+                            <li>Email : <a className="hover:text-black" href="mailto:info@comexhomes.ke">info@comexhomes.ke</a></li>
                             <li><a className="hover:text-black" href="tel:+254722390393">+254 722 390 393</a></li>
                         </ul>
                     </div>
@@ -37,7 +37,7 @@ function Footer() {
                         <li><a href="https://www.youtube.com/channel/UC6Dm0R805fzKUROf96u-VpQ" rel="noreferrer" target="_blank" className="hover:text-black"><span className="hidden">YouTube</span><FaYoutube /></a></li>
                     </ul>
                     <p className="flex-grow copy text-white">Accessibility Statement<br />
-                        &copy; {yyyy} Comex Homes. All Rights Reserved. The property information herein is derived from various sources that may include, but not be limited to,government records</p>
+                        &copy; {yyyy} Comex Homes. All Rights Reserved. </p>
                 </div>
             </Container>
         </footer>
