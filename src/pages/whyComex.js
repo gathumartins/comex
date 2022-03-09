@@ -6,7 +6,7 @@ import Banner from '../components/Banner';
 import WhyMivi from '../components/WhyMivi';
 import banner from '../../static/imgs/whyus.jpg';
 
-function whyComex() {
+function whycomex() {
     return (
         <Layout>
             <Banner banner={banner} />
@@ -17,4 +17,4 @@ function whyComex() {
     );
 }
 
-export default whyComex;
+export default whycomex;

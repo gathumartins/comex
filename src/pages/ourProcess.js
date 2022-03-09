@@ -10,7 +10,7 @@ import Property from '../components/Property';
 import ProcessTwo from '../components/ProcessTwo';
 
 
-function ourProcess() {
+function ourprocess() {
     const responsive = {
         desktop: {
             breakpoint: { max: 3000, min: 1024 },
@@ -90,4 +90,4 @@ function ourProcess() {
     );
 }
 
-export default ourProcess;
+export default ourprocess;

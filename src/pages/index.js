@@ -1,6 +1,6 @@
 import * as React from "react";
 import { Helmet } from "react-helmet";
-import { useStaticQuery, graphql } from 'gatsby';
+import {  graphql } from 'gatsby';
 import Layout from "../components/Layout"
 import Slider from "../components/Slider";
 import Project from "../components/Project"
@@ -10,25 +10,9 @@ import Testimonial from "../components/Testimonial";
 import Connect from "../components/Connect";
 
 // markup
-const IndexPage = () => {
-  const process = useStaticQuery(graphql`
-            {
-        allWpCustomProcess {
-            nodes {
-            content
-            id
-            title
-            featuredImage {
-                node {
-                sourceUrl
-                }
-            }
-            }
-        }
-        }
-    `)
+const indexpage = ({data}) => {
 
-  let processes = process.allWpCustomProcess.nodes;
+  let processes = data.allWpCustomProcess.nodes;
   return (
     <Layout>
       <Helmet>
@@ -48,4 +32,20 @@ const IndexPage = () => {
   )
 }
 
-export default IndexPage
+export const query = graphql `
+query{
+        allWpCustomProcess {
+            nodes {
+            content
+            id
+            title
+            featuredImage {
+                node {
+                sourceUrl
+                }
+            }
+            }
+        }
+        }
+`
+export default indexpage

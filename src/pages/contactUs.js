@@ -5,7 +5,7 @@ import Banner from '../components/Banner';
 import Contact from '../components/Contact';
 import banner from '../../static/imgs/contact.jpg';
 
-function contactUs() {
+function contactus() {
     return (
         <Layout>
             <Banner banner={banner}/>
@@ -15,4 +15,4 @@ function contactUs() {
     );
 }
 
-export default contactUs;
+export default contactus;
