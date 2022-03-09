@@ -23,10 +23,10 @@ function NavSolid({logo}) {
             <Container>
                 <ul className='d-flex align-items-center justify-around font-spartan text-black'>
                     <li><Link to="/properties" className="hover:text-comex-primary text-uppercase">Properties</Link></li>
-                    <li><Link to="/whyComex" className="hover:text-comex-primary text-uppercase">Why Comex</Link></li>
+                    <li><Link to="/whycomex" className="hover:text-comex-primary text-uppercase">Why Comex</Link></li>
                     <li className={myHeader ? `order-first hover:text-comex-primary text-uppercase transition-all` : `order-0 hover:text-comex-primary text-uppercase transition-all`}><Link to="/"><img src={logo} alt="Comex Homes logo" className={myHeader ? `h-16 transition-all` : `h-24 transition-all`} /></Link></li>
-                    <li><Link to="/ourProcess" className="hover:text-comex-primary text-uppercase">Our Process</Link></li>
-                    <li><Link to="/contactUs" className="hover:text-comex-primary text-uppercase">Contact Us</Link></li>
+                    <li><Link to="/ourprocess" className="hover:text-comex-primary text-uppercase">Our Process</Link></li>
+                    <li><Link to="/contactus" className="hover:text-comex-primary text-uppercase">Contact Us</Link></li>
                 </ul>
             </Container>
         </nav>

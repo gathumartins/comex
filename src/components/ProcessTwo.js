@@ -1,26 +1,8 @@
 import React from 'react';
 import { Container } from 'react-bootstrap';
-import { Link, useStaticQuery, graphql } from 'gatsby';
+import { Link } from 'gatsby';
 
-function ProcessTwo() {
-    const process = useStaticQuery(graphql`
-            {
-        allWpCustomProcess{
-            nodes {
-            content
-            id
-            title
-            featuredImage {
-                node {
-                sourceUrl
-                }
-            }
-            }
-        }
-        }
-    `)
-
-    let processes = process.allWpCustomProcess.nodes;
+function ProcessTwo({ processes}) {
   return (
       <section className="relative processMain">
           <Container fluid={"lg"} className="gap-4 processTwo">

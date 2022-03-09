@@ -1,4 +1,5 @@
 import React from 'react';
+import { graphql } from 'gatsby';
 import Carousel from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
 import { Container } from 'react-bootstrap';
@@ -10,7 +11,7 @@ import Property from '../components/Property';
 import ProcessTwo from '../components/ProcessTwo';
 
 
-function ourprocess() {
+function ourprocess({data}) {
     const responsive = {
         desktop: {
             breakpoint: { max: 3000, min: 1024 },
@@ -25,9 +26,15 @@ function ourprocess() {
             items: 1
         }
     };
+    let processes = data.allWpCustomProcess.nodes;
     return (
         <Layout>
-            <Banner banner={banner}/>
+            <Helmet>
+                <meta charSet="utf-8" />
+                <meta name="viewport" content="width=device-width, initial-scale=1" />
+                <title>Comex-{data.wpPage.title}</title>
+            </Helmet>
+            <Banner banner={data.wpPage.featuredImage.node.sourceUrl} altTxt={data.wpPage.featuredImage.node.altText} slug={data.wpPage.slug} slugLabel={data.wpPage.title} />
             <header className="py-10">
                 <Container className="text-center relative comexHeads">
                     <h1 className="text-3xl sm:text-4xl md:text-2xl lg:text-4xl max-w-[400px] mx-auto">Our Process</h1>
@@ -35,7 +42,7 @@ function ourprocess() {
             </header>
             <section className="relative processMain">
                 <Container fluid={"lg"} className="gap-4 processTwo">
-                    <ProcessTwo/>
+                    <ProcessTwo processes={processes}/>
                 </Container>
             </section>
             <section className="py-14">
@@ -89,5 +96,31 @@ function ourprocess() {
         </Layout>
     );
 }
-
+export const query = graphql`
+query{
+        allWpCustomProcess(sort: {order: DESC, fields: date}){
+            nodes {
+            content
+            id
+            title
+            featuredImage {
+                node {
+                sourceUrl
+                }
+            }
+            }
+        }
+        wpPage(id: {eq: "cG9zdDoyNg=="}) {
+            title
+            slug
+            uri
+            featuredImage {
+            node {
+                sourceUrl
+                altText
+            }
+            }
+        } 
+    }
+`
 export default ourprocess;
