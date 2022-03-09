@@ -1,4 +1,5 @@
 import React from 'react';
+import {Link} from 'gatsby';
 import { Container } from 'react-bootstrap';
 
 function WhyAbout() {
@@ -28,7 +29,7 @@ function WhyAbout() {
                         construction, and a fast turnaround.</p>
 
                     <div className="my-3">
-                        <a href="/whyComex" className="bg-comex-primary text-white text-md rounded-lg p-3">WHY US</a>
+                        <Link to="/whyComex" className="bg-comex-primary text-white text-md rounded-lg p-3">WHY US</Link>
                     </div>
                 </div>
                 <iframe className="w-full aspect-video rounded-xl whyVid " title="Why Comex Homes Video" src="https://www.youtube-nocookie.com/embed/Vjv7MqbRvtE"></iframe>

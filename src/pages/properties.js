@@ -1,6 +1,6 @@
-import React, { useEffect, useState } from 'react';
+import React from 'react';
 import {Container} from 'react-bootstrap';
-import ReactPaginate from 'react-paginate';
+// import ReactPaginate from 'react-paginate';
 import Layout from '../components/Layout';
 import Banner from '../components/Banner';
 import Connect from '../components/Connect';

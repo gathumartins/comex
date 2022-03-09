@@ -32,11 +32,11 @@ function Contact() {
           <div className="max-w-[300px] mx-auto">
             <ul className="flex justify-between my-4 w-[250px] text-black">
               <li>Follow Us</li>
-              <li><a href="https://www.facebook.com/comexhomes" target="_blank" className="hover:text-comex-primary"><span className="hidden">Facebook</span><FaFacebookF /></a></li>
-              <li><a href="https://www.instagram.com/comexhomeske/" target="_blank" className="hover:text-comex-primary"><span className="hidden">Instagram</span><FaInstagram /></a></li>
-              <li><a href="https://twitter.com/ComexHomes" target="_blank" className="hover:text-comex-primary"><span className="hidden">Twitter</span><FaTwitter /></a></li>
-              <li><a href="https://www.linkedin.com/company/comexhomes" target="_blank" className="hover:text-comex-primary"><span className="hidden">Linkedin</span><FaLinkedinIn /></a></li>
-              <li><a href="https://www.youtube.com/channel/UC6Dm0R805fzKUROf96u-VpQ" target="_blank" className="hover:text-comex-primary"><span className="hidden">YouTube</span><FaYoutube /></a></li>
+              <li><a href="https://www.facebook.com/comexhomes" rel="noreferrer" target="_blank" className="hover:text-comex-primary"><span className="hidden">Facebook</span><FaFacebookF /></a></li>
+              <li><a href="https://www.instagram.com/comexhomeske/" rel="noreferrer" target="_blank" className="hover:text-comex-primary"><span className="hidden">Instagram</span><FaInstagram /></a></li>
+              <li><a href="https://twitter.com/ComexHomes" rel="noreferrer" target="_blank" className="hover:text-comex-primary"><span className="hidden">Twitter</span><FaTwitter /></a></li>
+              <li><a href="https://www.linkedin.com/company/comexhomes" rel="noreferrer" target="_blank" className="hover:text-comex-primary"><span className="hidden">Linkedin</span><FaLinkedinIn /></a></li>
+              <li><a href="https://www.youtube.com/channel/UC6Dm0R805fzKUROf96u-VpQ" rel="noreferrer" target="_blank" className="hover:text-comex-primary"><span className="hidden">YouTube</span><FaYoutube /></a></li>
             </ul>
           </div>
     </Container>

@@ -11,10 +11,6 @@ function Project() {
                         <h1 className="text-white text-4xl md:text-5xl lg:text-4xl xl:text-6xl leading-24 font-spartan font-weight-500 text-uppercase inline-block align-middle mb-3">Our<br/> Projects</h1>
                     </div>
                     <Property />
-                    <Property />
-                    <Property />
-                    <Property />
-                    <Property />
                 </div>
             </Container>
         </article>

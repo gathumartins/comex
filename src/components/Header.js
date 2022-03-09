@@ -33,9 +33,9 @@ function Header() {
                 <ul className="text-2xl text-center">
                     <li className='p-3 hover:bg-white hover:text-comex-primary'><Link href="/" onClick={handleClose} className="text-uppercase hover:text-comex-primary">Home</Link></li>
                     <li className="p-3 hover:bg-white hover:text-comex-primary"><Link href="/properties" onClick={handleClose} className="text-uppercase hover:text-comex-primary">Properties</Link></li>
-                    <li className="p-3 hover:bg-white hover:text-comex-primary"><Link href="/whyComex" onClick={handleClose} className="text-uppercase hover:text-comex-primary">Why Comex</Link></li>
-                    <li className="p-3 hover:bg-white hover:text-comex-primary"><Link href="/ourProcess" onClick={handleClose} className="text-uppercase hover:text-comex-primary">Our Process</Link></li>
-                    <li className="p-3 hover:bg-white hover:text-comex-primary"><Link href="/contactUs" onClick={handleClose} className="text-uppercase hover:text-comex-primary">Contact Us</Link></li>
+                    <li className="p-3 hover:bg-white hover:text-comex-primary"><Link href="/whycomex" onClick={handleClose} className="text-uppercase hover:text-comex-primary">Why Comex</Link></li>
+                    <li className="p-3 hover:bg-white hover:text-comex-primary"><Link href="/ourprocess" onClick={handleClose} className="text-uppercase hover:text-comex-primary">Our Process</Link></li>
+                    <li className="p-3 hover:bg-white hover:text-comex-primary"><Link href="/contactus" onClick={handleClose} className="text-uppercase hover:text-comex-primary">Contact Us</Link></li>
                 </ul>
             </Offcanvas.Body>
         </Offcanvas>
