@@ -36,8 +36,7 @@ function Footer() {
                         <li><a href="https://www.linkedin.com/company/comexhomes" rel="noreferrer" target="_blank" className="hover:text-black"><span className="hidden">Linkedin</span><FaLinkedinIn /></a></li>
                         <li><a href="https://www.youtube.com/channel/UC6Dm0R805fzKUROf96u-VpQ" rel="noreferrer" target="_blank" className="hover:text-black"><span className="hidden">YouTube</span><FaYoutube /></a></li>
                     </ul>
-                    <p className="flex-grow copy text-white">Accessibility Statement<br />
-                        &copy; {yyyy} Comex Homes. All Rights Reserved. </p>
+                    <p className="flex-grow copy text-white">&copy; {yyyy} Comex Homes. All Rights Reserved. </p>
                 </div>
             </Container>
         </footer>
