@@ -56,7 +56,8 @@ p{
     left: 0;
     top: 0;
     width: 48%;
-    height: 680px;
+    height: 600px;
+    margin-top: 150px;
     background: #f8a428;
     background-size: cover;
 }
