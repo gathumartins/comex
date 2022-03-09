@@ -1,4 +1,5 @@
 import React from 'react';
+import { Helmet } from 'react-helmet';
 import { graphql } from 'gatsby';
 import Carousel from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
