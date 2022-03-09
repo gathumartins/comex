@@ -4,8 +4,8 @@ import Property from '../components/Property';
 
 function PropertiesSearch() {
   return (
-    <section className="relative searchCont">
-          <Container fluid={'lg'} className="lg:flex justify-between gap-6">
+    <section className="relative searchCont py-14">
+      {/*          <Container fluid={'lg'} className="lg:flex justify-between gap-6">
               <div className="searchLeft p-[40px] w-full lg:w-[55.12%] lg:pt-[110px] lg:pb-[63px] lg:pl-[8.34%] lg:pr-[4.7%]">
                   <div className="contact-heading specHeading">
                       <h1>
@@ -20,14 +20,9 @@ function PropertiesSearch() {
                   </h1>
                   <form action="">
                   </form>
-         </div>     
-    </Container>
+         </div>
+    </Container> */}
     <Container fluid={'lg'} className="pb-14 grid md:grid-cols-2 lg:grid-cols-3 gap-1 ">
-            <Property />
-            <Property />
-            <Property />
-            <Property />
-            <Property />
             <Property />
     </Container>
     </section>

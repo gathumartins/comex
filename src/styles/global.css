@@ -330,9 +330,9 @@ border-color: #fff;
 }
 /* search widget */
 .searchCont{
-    min-height:400px;
+    min-height:300px;
 }
-.searchCont:before{
+/* .searchCont:before{
     content: '';
     display: block;
     position: absolute;
@@ -343,7 +343,7 @@ border-color: #fff;
     height: 350px;
     background:#f8a428;
     background-size: cover;
-}
+} */
 .searchRight{
     padding: 3.75vw 2.8125vw;
 }

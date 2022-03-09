@@ -1,5 +1,5 @@
 import React from 'react';
-import {Container} from 'react-bootstrap';
+// import {Container} from 'react-bootstrap';
 // import ReactPaginate from 'react-paginate';
 import Layout from '../components/Layout';
 import Banner from '../components/Banner';
@@ -12,10 +12,10 @@ function properties() {
         <Layout>
             <Banner banner={banner}/>
             <PropertiesSearch/>
-            <section className="py-14">
+            {/* <section className="py-14">
             <Container fluid={"lg"}>
             </Container>
-            </section>
+            </section>*/}
             <Connect />
         </Layout>
     );
