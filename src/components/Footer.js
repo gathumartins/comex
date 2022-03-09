@@ -17,9 +17,9 @@ function Footer() {
                     <div className="flex-grow">
                         <ul className="sm:flex text-center sm:text-left justify-around gap-4 max-w-[700px] ml-auto">
                             <li><Link to="/properties" className="hover:text-white">PROPERTIES</Link></li>
-                            <li><Link to="/whycomex" className="hover:text-white">WHY COMEX</Link></li>
-                            <li><Link to="/ourprocess" className="hover:text-white">OUR PROCESS</Link></li>
-                            <li><Link to="/contactus" className="hover:text-white">CONTACT US</Link></li>
+                            <li><Link to="/whyComex" className="hover:text-white">WHY COMEX</Link></li>
+                            <li><Link to="/ourProcess" className="hover:text-white">OUR PROCESS</Link></li>
+                            <li><Link to="/contactUs" className="hover:text-white">CONTACT US</Link></li>
                         </ul>
                         <ul className="flex justify-start gap-4 max-w-[700px] ml-auto pl-7 mt-3 text-white">
                             <li>Email : <a className="hover:text-black" href="mailto:buy@comexhomes.com">buy@comexhomes.com</a></li>

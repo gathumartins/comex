@@ -28,7 +28,7 @@ function property() {
       <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quia ipsum sit est, repudiandae fugiat quaerat quis dignissimos nostrum error natus voluptates saepe. Eligendi repellendus, illo atque consequatur dolorem odit praesentium vero animi eius, corrupti fugiat maiores autem consequuntur obcaecati sit, officiis possimus debitis iusto. Dicta, quis ad? Consequatur hic dignissimos facilis nihil aliquam quidem itaque modi voluptatum maxime nemo? Excepturi nesciunt, quibusdam nostrum itaque illum dolorem dolor inventore deleniti aperiam! Voluptas sapiente eaque laudantium culpa, et unde in non fugit atque at modi facilis soluta saepe provident reiciendis qui mollitia nemo fuga? Porro exercitationem fuga amet nam ut dolore. Suscipit.</p>
       <div className="propBtm md:flex justify-between gap-6">
       <div className="propLinks w-[100%] md:w-[50%] py-7">
-              <Link to="/contactus">Request More Info</Link>
+              <Link to="/contactUs">Request More Info</Link>
           <Link to="/schedule">Schedule a Showing</Link>
       </div>
       <div className="propShare w-[100%]  md:w-[50%] p-7">
