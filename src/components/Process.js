@@ -17,7 +17,7 @@ function Process({ processes}) {
                     <br />
                     <div className="w-full">
                         <h1 className="text-3xl">{process.title}</h1>
-                        <p className="text-md" dangerouslySetInnerHTML={{ __html: process.content }}></p>
+                        <div className="text-md" dangerouslySetInnerHTML={{ __html: process.content }}></div>
                     </div>
                 </div>
             )}

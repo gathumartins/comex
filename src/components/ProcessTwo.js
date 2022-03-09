@@ -33,7 +33,7 @@ function ProcessTwo() {
                               </div>
                               <div className="proInner">
                                   <h1 className="text-3xl">{process.title}</h1>
-                                  <p className="text-md" dangerouslySetInnerHTML={{__html: process.content}}></p>
+                                  <div className="text-md" dangerouslySetInnerHTML={{__html: process.content}}></div>
                                   <Link to="/schedule" className="viewLink">Schedule Viewing</Link>
                               </div>
                           </div>
