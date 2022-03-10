@@ -14,7 +14,6 @@ function Slider({bigCap, smallCap, images}) {
                     </Container>
                 </Carousel.Caption>
             </Carousel.Item>
-            
             )}
         </Carousel>
     )
