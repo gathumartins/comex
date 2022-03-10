@@ -32,7 +32,7 @@ function property({data}) {
           <div dangerouslySetInnerHTML={{ __html: data.wpCustomProperty.content }}></div>
       <div className="propBtm md:flex justify-between gap-6">
       <div className="propLinks w-[100%] md:w-[50%] py-7">
-              <Link to="/contactUs">Request More Info</Link>
+              <Link to="/contact_us">Request More Info</Link>
           <Link to="/schedule">Schedule a Showing</Link>
       </div>
       <div className="propShare w-[100%]  md:w-[50%] p-7">
