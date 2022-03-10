@@ -22,9 +22,9 @@ const indexpage = ({data}) => {
         <title>Comex-Home</title>
       </Helmet>
       <main className="relative">
-        <Slider />
+        <Slider bigCap={data.wpPage.homeSlider.bigCaption} smallCap={data.wpPage.homeSlider.smallCaption} images={data.wpPage.homeSlider.images}/>
         <Project properties={properties}/>
-        <WhyHome />
+        <WhyHome vidUrl={data.wpPage.whyComex.video} content={data.wpPage.content} titles={data.wpPage.whyComex.titles}/>
         <Process processes={processes}/>
         <Testimonial />
         <Connect />
@@ -35,6 +35,29 @@ const indexpage = ({data}) => {
 
 export const query = graphql `
 query{
+      wpPage(id: {eq: "cG9zdDoxMA=="}) {
+          whyComex {
+            video
+            titles {
+              title
+              icon {
+                altText
+                sourceUrl
+              }
+            }
+          }
+          content
+          homeSlider {
+            bigCaption
+            smallCaption
+            images {
+              image {
+                altText
+                sourceUrl
+              }
+            }
+          }
+      },
         allWpCustomProcess(sort: {order: DESC, fields: date}){
             nodes {
             content
