@@ -21,7 +21,7 @@ function Footer() {
                             <li><Link to="/our_process" className="hover:text-white">OUR PROCESS</Link></li>
                             <li><Link to="/contact_us" className="hover:text-white">CONTACT US</Link></li>
                         </ul>
-                        <ul className="flex justify-start gap-4 max-w-[700px] ml-auto pl-7 mt-3 text-white">
+                        <ul className="md:flex justify-start gap-4 max-w-[700px] ml-auto md:pl-7 mt-3 text-white">
                             <li>Email : <a className="hover:text-black" href="mailto:info@comexhomes.ke">info@comexhomes.ke</a></li>
                             <li><a className="hover:text-black" href="tel:+254722390393">+254 722 390 393</a></li>
                         </ul>
