@@ -1,10 +1,10 @@
 import React from 'react';
-import {Link} from 'gatsby';
+import { Helmet} from 'react-helmet';
+import {Link, graphql} from 'gatsby';
 import { Container } from 'react-bootstrap';
 import Layout from '../components/Layout';
 import Banner from '../components/Banner';
 import Connect from '../components/Connect';
-import banner from '../../static/imgs/property.jpg';
 import MapComp from '../components/MapComp';
 // import Property from '../components/Property';
 import {EmailShareButton, FacebookShareButton, LinkedinShareButton, TwitterShareButton, WhatsappShareButton} from "react-share";
@@ -13,19 +13,23 @@ import { FaFacebookF, FaLinkedinIn, FaTwitter, FaWhatsapp } from 'react-icons/fa
 import { photos } from "../data/photo";
 import PropertyGallery from '../components/PropertyGallery';
 
-function property() {
+function property({data}) {
   const isBrowser = typeof window !== "undefined";
   let ShareLink;
   if(isBrowser) {
     ShareLink = window.location.href;
-    console.log(ShareLink);
   }
   return (
     <Layout>
-    <Banner banner={banner}/>
+      <Helmet>
+        <meta charSet="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <title>Comex-{data.wpCustomProperty.title}</title>
+      </Helmet>
+      <Banner banner={data.wpCustomProperty.featuredImage.node.sourceUrl} altTxt={data.wpCustomProperty.featuredImage.node.altText} slug={data.wpCustomProperty.slug} slugLabel={data.wpCustomProperty.title} />
     <section className="relative propertyTop py-14 gap-2">
     <Container fluid={"lg"} className="min-h-[300px] propLeft">
-      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quia ipsum sit est, repudiandae fugiat quaerat quis dignissimos nostrum error natus voluptates saepe. Eligendi repellendus, illo atque consequatur dolorem odit praesentium vero animi eius, corrupti fugiat maiores autem consequuntur obcaecati sit, officiis possimus debitis iusto. Dicta, quis ad? Consequatur hic dignissimos facilis nihil aliquam quidem itaque modi voluptatum maxime nemo? Excepturi nesciunt, quibusdam nostrum itaque illum dolorem dolor inventore deleniti aperiam! Voluptas sapiente eaque laudantium culpa, et unde in non fugit atque at modi facilis soluta saepe provident reiciendis qui mollitia nemo fuga? Porro exercitationem fuga amet nam ut dolore. Suscipit.</p>
+          <div dangerouslySetInnerHTML={{ __html: data.wpCustomProperty.content }}></div>
       <div className="propBtm md:flex justify-between gap-6">
       <div className="propLinks w-[100%] md:w-[50%] py-7">
               <Link to="/contactUs">Request More Info</Link>
@@ -44,19 +48,11 @@ function property() {
       </div>
     </Container>
     <div className="propRight min-h-[300px] bg-comex-primary text-white">
-          <h1 className="text-4xl mb-3">KES: 990,000</h1>
+        <h1 className="text-3xl mb-3">KES: {data.wpCustomProperty.propertyInfo.pricing.minPrice} - KES: {data.wpCustomProperty.propertyInfo.pricing.maxPrice}</h1>
           <ul className="leading-2">
-            <li>Listing ID: <span>A11048073</span></li>
-            <li>Beds: <span>8</span></li>
-            <li>Baths: <span>7</span></li>
-            <li>Living Area Sq.Ft.: <span>6,458</span></li>
-            <li>Lot Square Feet: <span>13,072</span></li>
-            <li>Property Type: <span>Residential</span></li>
-            <li>Property Sub Type: <span>Single Family Residence</span></li>
-            <li>Subdivision: <span>BEACH VIEW SUB</span></li>
-            <li>Waterfront: <span>Yes</span></li>
+          {data.wpCustomProperty.propertyInfo.propertyprops?.map((propInfo, i) => <li key={i}>{propInfo.name}: <span>{propInfo.value}</span></li>)}
           </ul>
-          <a href="/"> Virtual Tour</a>
+          <a href="/"> Download Profile</a>
     </div>
     </section>
     <Container fluid={"lg"} className="pt-14">
@@ -85,5 +81,44 @@ function property() {
     </Layout>
   )
 }
-
+export const query = graphql`
+    query($databaseId: Int!) {
+      wpCustomProperty(databaseId: {eq: $databaseId}) {
+        id
+        title
+        slug
+        uri
+        content
+        featuredImage {
+          node {
+            sourceUrl
+          }
+        }
+        googleMap {
+          apiKey
+          pin
+          coords {
+            latitude
+            longitude
+          }
+        }
+        propertyInfo {
+          location
+          propertyprops {
+            name
+            value
+          }
+          pricing {
+            maxPrice
+            minPrice
+          }
+          propertyGallery {
+            altText
+            sourceUrl
+          }
+        }
+        databaseId
+      }
+    }
+    `
 export default property;

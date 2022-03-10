@@ -56,8 +56,6 @@ p{
     left: 0;
     top: 0;
     width: 48%;
-    height: 600px;
-    margin-top: 150px;
     background: #f8a428;
     background-size: cover;
 }
@@ -354,6 +352,10 @@ border-color: #fff;
 }
 
 @media only screen and (min-width: 992px) {
+    .projects:before{
+        height: 500px;
+        margin-top: 100px;
+    }
     .carousel-indicators {
         bottom: 80px;
         justify-content: space-evenly !important;
@@ -403,7 +405,10 @@ border-color: #fff;
         max-width: 500px;
     }
 }
-
+/* breadcrumbs */
+.breadcrubs li a:hover{
+    color: #000
+}
 @media only screen and (max-width:991px) {
     .headerlarge {
         display: none;

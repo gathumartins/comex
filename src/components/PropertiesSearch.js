@@ -1,8 +1,8 @@
 import React from 'react';
 import { Container} from 'react-bootstrap';
-import Property from '../components/Property';
+import Property from './Property';
 
-function PropertiesSearch() {
+function PropertiesSearch({ properties}) {
   return (
     <section className="relative searchCont py-14">
       {/*          <Container fluid={'lg'} className="lg:flex justify-between gap-6">
@@ -23,7 +23,10 @@ function PropertiesSearch() {
          </div>
     </Container> */}
     <Container fluid={'lg'} className="pb-14 grid md:grid-cols-2 lg:grid-cols-3 gap-1 ">
-            <Property />
+        {properties?.map((property) => 
+          <Property key={property.node.id} title={property.node.title} location={property.node.propertyInfo.location} imgSrc={property.node.featuredImage.node.sourceUrl} altTxt={property.node.featuredImage.node.altText} propertyLink={property.node.uri}/>
+
+          )}
     </Container>
     </section>
   )

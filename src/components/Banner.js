@@ -8,7 +8,7 @@ function Banner({ banner, altTxt, slug, slugLabel}) {
             <img src={banner} className="object-cover h-full" alt={altTxt} />
             <section className="bg-comex-primary/70 text-white p-2 absolute w-full bottom-0">
                 <Container>
-                <ul className="flex justify-start gap-2">
+                <ul className="flex justify-start gap-2 breadcrubs">
                         <li><Link to="/">Home</Link></li>&gt;
                         <li><Link to={slug}>{slugLabel}</Link></li>
                 </ul>

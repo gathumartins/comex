@@ -1,16 +1,15 @@
 import React from 'react';
-// import {Container} from 'react-bootstrap';
-// import ReactPaginate from 'react-paginate';
-
 import { Helmet } from 'react-helmet';
 import { graphql } from 'gatsby';
+// import {Container} from 'react-bootstrap';
+// import ReactPaginate from 'react-paginate';
 import Layout from '../components/Layout';
 import Banner from '../components/Banner';
 import Connect from '../components/Connect';
 import PropertiesSearch from '../components/PropertiesSearch';
-import banner from '../../static/imgs/properties.jpg';
 
 function properties({data}) {
+    const properties = data.allWpCustomProperty.edges;
     return (
         <Layout>
             <Helmet>
@@ -19,7 +18,7 @@ function properties({data}) {
                 <title>Comex-{data.wpPage.title}</title>
             </Helmet>
             <Banner banner={data.wpPage.featuredImage.node.sourceUrl} altTxt={data.wpPage.featuredImage.node.altText} slug={data.wpPage.slug} slugLabel={data.wpPage.title} />
-            <PropertiesSearch/>
+            <PropertiesSearch properties={properties}/>
             {/* <section className="py-14">
             <Container fluid={"lg"}>
             </Container>
@@ -30,16 +29,56 @@ function properties({data}) {
 }
 export const query = graphql`
     query{
-    wpPage(id: {eq: "cG9zdDoxOA=="}) {
+       wpPage(id: {eq: "cG9zdDoxOA=="}) {
+            title
+            slug
+            uri
+            featuredImage {
+            node {
+                sourceUrl
+                altText
+            }
+            }
+        },  
+      allWpCustomProperty(sort: {fields: date, order: DESC}) {
+    edges {
+      node {
         title
-        slug
+        id
         uri
+        slug
+        content
         featuredImage {
-        node {
-            sourceUrl
+          node {
             altText
+            sourceUrl
+          }
         }
+        googleMap {
+          apiKey
+          coords {
+            latitude
+            longitude
+          }
+          pin
         }
+        propertyInfo {
+          location
+          pricing {
+            maxPrice
+            minPrice
+          }
+          propertyGallery {
+            altText
+            sourceUrl
+          }
+          propertyprops {
+            name
+            value
+          }
+        }
+      }
     }
+  }
     }`
 export default properties;

@@ -13,6 +13,7 @@ import Connect from "../components/Connect";
 const indexpage = ({data}) => {
 
   let processes = data.allWpCustomProcess.nodes;
+  const properties = data.allWpCustomProperty.edges;
   return (
     <Layout>
       <Helmet>
@@ -22,7 +23,7 @@ const indexpage = ({data}) => {
       </Helmet>
       <main className="relative">
         <Slider />
-        <Project />
+        <Project properties={properties}/>
         <WhyHome />
         <Process processes={processes}/>
         <Testimonial />
@@ -45,7 +46,47 @@ query{
                 }
             }
             }
+        },
+              allWpCustomProperty(sort: {fields: date, order: DESC}) {
+    edges {
+      node {
+        title
+        id
+        uri
+        slug
+        content
+        featuredImage {
+          node {
+            altText
+            sourceUrl
+          }
         }
+        googleMap {
+          apiKey
+          coords {
+            latitude
+            longitude
+          }
+          pin
+        }
+        propertyInfo {
+          location
+          pricing {
+            maxPrice
+            minPrice
+          }
+          propertyGallery {
+            altText
+            sourceUrl
+          }
+          propertyprops {
+            name
+            value
+          }
+        }
+      }
+    }
+  }
         }
 `
 export default indexpage

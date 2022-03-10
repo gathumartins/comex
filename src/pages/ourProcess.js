@@ -7,7 +7,6 @@ import { Container } from 'react-bootstrap';
 import Layout from '../components/Layout';
 import Banner from '../components/Banner';
 import Connect from '../components/Connect';
-import banner from '../../static/imgs/process.jpg';
 import Property from '../components/Property';
 import ProcessTwo from '../components/ProcessTwo';
 
