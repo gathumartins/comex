@@ -1,13 +1,12 @@
 import React from 'react';
-import {Helmet} from 'react-helmet';
-import {graphql} from 'gatsby';
+import { Helmet } from 'react-helmet';
+import { graphql } from 'gatsby';
 import Layout from '../components/Layout';
-import Connect from '../components/Connect';
-import WhyAbout from '../components/WhyAbout';
+import MapComp from '../components/MapComp';
 import Banner from '../components/Banner';
-import WhyMivi from '../components/WhyMivi';
+import Contact from '../components/Contact';
 
-function whycomex({data}) {
+function contactUs({data}) {
     return (
         <Layout>
             <Helmet>
@@ -15,16 +14,15 @@ function whycomex({data}) {
                 <meta name="viewport" content="width=device-width, initial-scale=1" />
                 <title>Comex-{data.wpPage.title}</title>
             </Helmet>
-            <Banner banner={data.wpPage.featuredImage.node.sourceUrl} altTxt={data.wpPage.featuredImage.node.altText} slug={data.wpPage.slug} slugLabel={data.wpPage.title}/>
-            <WhyAbout />
-            <WhyMivi />
-            <Connect />
+            <Banner banner={data.wpPage.featuredImage.node.sourceUrl} altTxt={data.wpPage.featuredImage.node.altText} slug={data.wpPage.slug} slugLabel={data.wpPage.title} />
+            <Contact />
+            <MapComp />
         </Layout>
     );
 }
 export const query = graphql`
     query{
-    wpPage(id: {eq: "cG9zdDoyMw=="}) {
+    wpPage(id: {eq: "cG9zdDoyOQ=="}) {
         title
         slug
         uri
@@ -35,6 +33,5 @@ export const query = graphql`
         }
         }
     }
-    }
-    `
-export default whycomex;
+    }`
+export default contactUs;

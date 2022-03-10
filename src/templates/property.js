@@ -26,7 +26,7 @@ function property({data}) {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <title>Comex-{data.wpCustomProperty.title}</title>
       </Helmet>
-      <Banner banner={data.wpCustomProperty.featuredImage.node.sourceUrl} altTxt={data.wpCustomProperty.featuredImage.node.altText} slug={data.wpCustomProperty.slug} slugLabel={data.wpCustomProperty.title} />
+      <Banner banner={data.wpCustomProperty.propertyInfo.bannerImage.sourceUrl} altTxt={data.wpCustomProperty.propertyInfo.bannerImage.altText} slug={data.wpCustomProperty.slug} slugLabel={data.wpCustomProperty.title} />
     <section className="relative propertyTop py-14 gap-2">
     <Container fluid={"lg"} className="min-h-[300px] propLeft">
           <div dangerouslySetInnerHTML={{ __html: data.wpCustomProperty.content }}></div>
@@ -116,6 +116,10 @@ export const query = graphql`
             altText
             sourceUrl
           }
+          bannerImage {
+          altText
+          sourceUrl
+        }
         }
         databaseId
       }
