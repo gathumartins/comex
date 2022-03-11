@@ -16,7 +16,7 @@ function contactUs({data}) {
             </Helmet>
             <Banner banner={data.wpPage.featuredImage.node.sourceUrl} altTxt={data.wpPage.featuredImage.node.altText} slug={data.wpPage.slug} slugLabel={data.wpPage.title} />
             <Contact />
-            <MapComp />
+            <MapComp pin={data.wpPage.googleMap.pin} latitude={data.wpPage.googleMap.coords.latitude} longitude={data.wpPage.googleMap.coords.longitude} Apikey={data.wpPage.googleMap.apiKey} />
         </Layout>
     );
 }
@@ -26,6 +26,14 @@ export const query = graphql`
         title
         slug
         uri
+        googleMap {
+        apiKey
+        coords {
+            latitude
+            longitude
+        }
+        pin
+        }
         featuredImage {
         node {
             sourceUrl

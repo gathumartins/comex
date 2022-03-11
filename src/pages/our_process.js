@@ -1,31 +1,31 @@
 import React from 'react';
 import { Helmet } from 'react-helmet';
 import { graphql } from 'gatsby';
-import Carousel from "react-multi-carousel";
-import "react-multi-carousel/lib/styles.css";
+// import Carousel from "react-multi-carousel";
+// import "react-multi-carousel/lib/styles.css";
 import { Container } from 'react-bootstrap';
 import Layout from '../components/Layout';
 import Banner from '../components/Banner';
 import Connect from '../components/Connect';
-import Property from '../components/Property';
+// import Property from '../components/Property';
 import ProcessTwo from '../components/ProcessTwo';
 
 
 function ourProcess({data}) {
-    const responsive = {
-        desktop: {
-            breakpoint: { max: 3000, min: 1024 },
-            items: 3
-        },
-        tablet: {
-            breakpoint: { max: 1024, min: 464 },
-            items: 2
-        },
-        mobile: {
-            breakpoint: { max: 464, min: 0 },
-            items: 1
-        }
-    };
+    // const responsive = {
+    //     desktop: {
+    //         breakpoint: { max: 3000, min: 1024 },
+    //         items: 3
+    //     },
+    //     tablet: {
+    //         breakpoint: { max: 1024, min: 464 },
+    //         items: 2
+    //     },
+    //     mobile: {
+    //         breakpoint: { max: 464, min: 0 },
+    //         items: 1
+    //     }
+    // };
     let processes = data.allWpCustomProcess.nodes;
     return (
         <Layout>
@@ -45,7 +45,9 @@ function ourProcess({data}) {
                     <ProcessTwo processes={processes}/>
                 </Container>
             </section>
-            <section className="py-14">
+            {/*
+        
+        <section className="py-14">
                 <header className="py-10">
                     <Container className="text-center relative comexHeads">
                         <h1 className="text-3xl sm:text-4xl md:text-2xl lg:text-4xl max-w-[400px] mx-auto">Featured Projects</h1>
@@ -92,6 +94,7 @@ function ourProcess({data}) {
                     <a href="/properties" className="text-md text-white bg-comex-primary color:white z-10 max-w-[300px] mx-auto p-2 rounded">View all Property</a>
                 </Container>
             </section>
+        */}
             <Connect />
         </Layout>
     );

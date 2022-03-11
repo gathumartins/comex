@@ -470,4 +470,7 @@ border-color: #fff;
      .propRight{
          padding:55px 20px;
      }
+     .footerTop ul li{
+         margin-bottom:15px;
+     }
 }

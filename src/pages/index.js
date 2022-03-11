@@ -98,10 +98,6 @@ query{
             maxPrice
             minPrice
           }
-          propertyGallery {
-            altText
-            sourceUrl
-          }
           propertyprops {
             name
             value

@@ -10,7 +10,6 @@ import MapComp from '../components/MapComp';
 import {EmailShareButton, FacebookShareButton, LinkedinShareButton, TwitterShareButton, WhatsappShareButton} from "react-share";
 import { HiMail} from 'react-icons/hi';
 import { FaFacebookF, FaLinkedinIn, FaTwitter, FaWhatsapp } from 'react-icons/fa';
-import { photos } from "../data/photo";
 import PropertyGallery from '../components/PropertyGallery';
 
 function property({data}) {
@@ -19,6 +18,12 @@ function property({data}) {
   if(isBrowser) {
     ShareLink = window.location.href;
   }
+  let photos=[];
+  data.wpCustomProperty.propertyInfo.propertyGallery.forEach(
+  (photo)=>{
+      photos.push({src:photo.src.sourceUrl, width:photo.width, height:photo.height, title:photo.src.title})
+  }
+  )
   return (
     <Layout>
       <Helmet>
@@ -52,7 +57,7 @@ function property({data}) {
           <ul className="leading-2">
           {data.wpCustomProperty.propertyInfo.propertyprops?.map((propInfo, i) => <li key={i}>{propInfo.name}: <span>{propInfo.value}</span></li>)}
           </ul>
-          <a href="https://test.comexhomes.ke/wp-content/uploads/2022/03/Comex-Homes-Nyayo-View-Suites.pdf" className="bg-black text-comex-primary hover:text-white" target="_blank" rel="noreferrer" download="Nyayo View"> Download Profile</a>
+          <a href={data.wpCustomProperty.propertyInfo.profile.sourceUrl} className="bg-black text-comex-primary hover:text-white" target="_blank" rel="noreferrer" download="Nyayo View"> Download Profile</a>
     </div>
     </section>
     <Container fluid={"lg"} className="pt-14">
@@ -63,20 +68,21 @@ function property({data}) {
           <div className="comexLine z-0"></div>
           <h1 className="text-3xl sm:text-4xl md:text-2xl lg:text-4xl bg-white z-10 max-w-[240px] md:max-w-[400px] mx-auto">Mapped Location</h1>
         </Container>
-        <MapComp/>
+        <MapComp pin={data.wpCustomProperty.googleMap.pin} latitude={data.wpCustomProperty.googleMap.coords.latitude} longitude={data.wpCustomProperty.googleMap.coords.longitude} Apikey={data.wpCustomProperty.googleMap.apiKey}/>
       </section>
+      {/*    
       <section className="py-14">
         <Container className="text-center mb-16 relative comexHeads">
           <div className="comexLine z-0"></div>
           <h1 className="text-3xl sm:text-4xl md:text-2xl lg:text-4xl bg-white z-10 max-w-[240px] md:max-w-[400px] mx-auto">Similar Listings</h1>
         </Container>
-        {/* <Container fluid={"lg"} className="flex justify-between gap-4 overflow-y-hidden overflow-x-scroll snap-x similarProp">
+        <Container fluid={"lg"} className="flex justify-between gap-4 overflow-y-hidden overflow-x-scroll snap-x similarProp">
           <Property />
           <Property />
           <Property />
           <Property />
-        </Container> */}
-      </section>
+        </Container> 
+    </section> */}
     <Connect />
     </Layout>
   )
@@ -103,6 +109,17 @@ export const query = graphql`
           }
         }
         propertyInfo {
+           profile {
+            sourceUrl
+          }
+          propertyGallery {
+            width
+            height
+            src {
+              sourceUrl
+              title
+            }
+          }
           location
           propertyprops {
             name
@@ -111,10 +128,6 @@ export const query = graphql`
           pricing {
             maxPrice
             minPrice
-          }
-          propertyGallery {
-            altText
-            sourceUrl
           }
           bannerImage {
           altText

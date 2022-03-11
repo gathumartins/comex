@@ -25,7 +25,7 @@ function PropertyGallery({photos}) {
                           currentIndex={currentImage}
                           views={photos.map(x => ({
                               ...x,
-                              srcset: x.srcSet,
+                              srcset: x.sourceUrl,
                               caption: x.title
                           }))}
                       />
