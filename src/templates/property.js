@@ -57,7 +57,7 @@ function property({data}) {
           <ul className="leading-2">
           {data.wpCustomProperty.propertyInfo.propertyprops?.map((propInfo, i) => <li key={i}>{propInfo.name}: <span>{propInfo.value}</span></li>)}
           </ul>
-          <a href={data.wpCustomProperty.propertyInfo.profile.sourceUrl} className="bg-black text-comex-primary hover:text-white" target="_blank" rel="noreferrer" download="Nyayo View"> Download Profile</a>
+          <a href={`https://test.comexhomes.ke/wp-content/uploads/2022/03/Comex-Homes-Nyayo-View-Suites.pdf`} className="bg-black text-comex-primary hover:text-white" target="_blank" rel="noreferrer" download="Nyayo View"> Download Profile</a>
     </div>
     </section>
     <Container fluid={"lg"} className="pt-14">
