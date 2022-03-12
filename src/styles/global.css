@@ -38,10 +38,12 @@ p{
 
 .carousel-indicators [data-bs-target] {
     width: 33% !important;
+    display: none !important;
 }
 
 .carousel-indicators {
     bottom: 80px;
+    display: none !important;
 }
 
 .projectsInn>div {

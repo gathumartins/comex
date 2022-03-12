@@ -8,7 +8,7 @@ function Footer() {
     const year = new Date();
     const yyyy = year.getFullYear();
     return (
-        <footer className="py-14 bg-comex-primary">
+        <footer className="pt-14 pb-3 bg-comex-primary">
             <Container fluid={"lg"}>
                 <div className="md:flex justify-between footerTop">
                     <div className="w-[100%] md:max-w-[250px] logo">
@@ -36,7 +36,7 @@ function Footer() {
                         <li><a href="https://www.linkedin.com/company/comexhomes" rel="noreferrer" target="_blank" className="hover:text-black"><span className="hidden">Linkedin</span><FaLinkedinIn /></a></li>
                         <li><a href="https://www.youtube.com/channel/UC6Dm0R805fzKUROf96u-VpQ" rel="noreferrer" target="_blank" className="hover:text-black"><span className="hidden">YouTube</span><FaYoutube /></a></li>
                     </ul>
-                    <p className="flex-grow copy text-white">&copy; {yyyy} Comex Homes. All Rights Reserved. </p>
+                    <p className="flex-grow copy text-white pt-4">&copy; {yyyy} Comex Homes. All Rights Reserved. </p>
                 </div>
             </Container>
         </footer>
