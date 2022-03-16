@@ -4,7 +4,10 @@ module.exports = {
     siteUrl: `https://comexhomes.ke/`
   },
   plugins: [
-    'gatsby-plugin-postcss',
+    `gatsby-plugin-postcss`,
+    `gatsby-plugin-image`,
+    `gatsby-plugin-sharp`,
+    `gatsby-transformer-sharp`,
     {
       resolve: 'gatsby-source-wordpress',
       options: {
