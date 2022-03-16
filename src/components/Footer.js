@@ -23,7 +23,7 @@ function Footer() {
                         </ul>
                         <ul className="text-center md:flex md:text-left justify-start gap-4 max-w-[700px] ml-auto md:pl-7 mt-3 text-white">
                             <li>Email : <a className="hover:text-black" href="mailto:info@comexhomes.ke">info@comexhomes.ke</a></li>
-                            <li><a className="hover:text-black" href="tel:+254742111444">+254742111444</a></li>
+                            <li><a className="hover:text-black" href="tel:+254799111555">0799 111 555</a></li>
                         </ul>
                     </div>
                 </div>
