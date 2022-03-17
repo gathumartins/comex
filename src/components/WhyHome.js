@@ -4,7 +4,7 @@ import { Container } from 'react-bootstrap';
 
 function WhyHome({ vidUrl, content, titles}) {
     return (
-        <article className="py-10">
+        <article className="pt-14">
             <section>
                 <Container className="text-center mb-10 relative comexHeads">
                     <div className="comexLine z-0"></div>

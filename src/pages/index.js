@@ -7,6 +7,7 @@ import Project from "../components/Project"
 import WhyHome from "../components/WhyHome";
 import Process from "../components/Process";
 import Testimonial from "../components/Testimonial";
+import Showcase from "../components/Showcase";
 import Connect from "../components/Connect";
 
 // markup
@@ -28,6 +29,7 @@ const indexpage = ({data}) => {
         <Process processes={processes}/>
         <Testimonial />
         <Connect />
+        <Showcase/>
       </main>
     </Layout>
   )
