@@ -1,4 +1,5 @@
-import React, { useState } from 'react';
+import React, { useRef, useState } from 'react';
+import emailjs from '@emailjs/browser';
 import { Container, Modal} from 'react-bootstrap';
 import { MdClose } from 'react-icons/md';
 
@@ -18,6 +19,19 @@ function Showcase() {
         }
         window.addEventListener('scroll', hideShowCase);
     }
+    const form = useRef();
+
+    const register = (e) => {
+        e.preventDefault();
+
+        emailjs.sendForm('service_75n5cgg', 'template_otttlep', form.current, 'user_wyL9szuhcFXTO7PpM4yk0')
+            .then((result) => {
+                console.log(result.text);
+            }, (error) => {
+                console.log(error.text);
+            });
+          e.target.reset();  
+    };
   return (
       <div className={`sticky bottom-0 showCase min-h-12  bg-white py-1 ${showCase ? 'invisible' : 'visible '}`}>
           <Container fluid={"lg"} className="flex justify-between flex-wrap gap-3 items-center">
@@ -50,7 +64,7 @@ function Showcase() {
                   <p className="text-sm mt-3">We're excited to get started on working with you! Please tell us a little more about yourself so we can make the experience bespoke.</p>
               </Modal.Header>
               <Modal.Body className="md:px-[80px]" scrollable>
-                  <form action="" className="popUpForm">
+                  <form ref={form} onSubmit={register} className="popUpForm">
                   <div className="mb-3">
                           <label htmlFor="name">Name<sup className="text-red-500">*</sup></label><br/>
                           <input className="form-control mt-2 focus:border-comex-primary" type="text" name="name" id="name" required/>
