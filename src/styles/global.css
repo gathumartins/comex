@@ -408,6 +408,9 @@ border-color: #fff;
 .logo {
     margin-right: 0px;
 }
+.footContacts li{
+    max-width:250px;
+}
 
 @media only screen and (min-width: 992px) {
     .projects:before{
@@ -534,4 +537,23 @@ border-color: #fff;
      .footerTop ul li{
          margin-bottom:15px;
      }
+     .footContacts li{
+         margin: 15px auto;
+         justify-content:space-around;
+     }
+     .footContacts li svg{
+         display: none;
+     }
+     .footContacts li:last-child{
+         max-width:150px;
+     }
+     .features{
+         grid-template-columns: auto;
+     }
+
+}
+@media only screen and (max-width:421px){
+    .feature {
+        margin: 0 auto;
+    }
 }

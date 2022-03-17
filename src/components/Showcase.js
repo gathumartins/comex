@@ -33,9 +33,9 @@ function Showcase({properties, formProps}) {
           e.target.reset();  
     };
   return (
-      <div className={`sticky bottom-0 showCase min-h-12  bg-white py-1 ${showCase ? 'invisible' : 'visible '}`}>
+      <div className={`sticky bottom-0 showCase min-h-12  bg-white py-1 ${showCase ? 'hidden' : 'block'}`}>
           <Container fluid={"lg"} className="flex justify-between flex-wrap gap-3 items-center">
-              <div className="features flex-grow grid grid-cols-2 sm:grid-cols-2 lg:grid-cols-4">
+              <div className="features flex-grow grid grid-cols-2 lg:grid-cols-4">
                 <div className="feature hidden md:inline">
                     <h6>YOU'RE VIEWING</h6>
                     <h3>{properties.title}</h3>

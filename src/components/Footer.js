@@ -22,9 +22,9 @@ function Footer() {
                             <li><Link to="/our_process" className="hover:text-white">OUR PROCESS</Link></li>
                             <li><Link to="/contact_us" className="hover:text-white">CONTACT US</Link></li>
                         </ul>
-                        <ul className="text-center md:flex md:text-left justify-start gap-4 max-w-[700px] ml-auto md:pl-7 mt-3 text-white">
-                            <li className="flex justify-between gap-3"><MdOutlineEmail className="h-6 w-6 text-white"/><a className="hover:text-black" href="mailto:info@comexhomes.ke">info@comexhomes.ke</a></li>
-                            <li className="flex justify-between gap-3"><MdLocalPhone className="h-6 w-6 text-white" /><a className="hover:text-black" href="tel:+254799111555">0799 111 555</a></li>
+                        <ul className="text-center md:flex md:text-left justify-start gap-4 max-w-[700px] ml-auto md:pl-7 mt-3 text-white footContacts">
+                            <li className="flex justify-start gap-2"><MdOutlineEmail className="h-6 w-6 text-white"/><a className="hover:text-black" href="mailto:info@comexhomes.ke">info@comexhomes.ke</a></li>
+                            <li className="flex justify-start gap-2"><MdLocalPhone className="h-6 w-6 text-white" /><a className="hover:text-black" href="tel:+254799111555">0799 111 555</a></li>
                         </ul>
                     </div>
                 </div>
