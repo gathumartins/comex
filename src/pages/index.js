@@ -14,7 +14,7 @@ import Connect from "../components/Connect";
 const indexpage = ({data}) => {
 
   let processes = data.allWpCustomProcess.nodes;
-  const properties = data.allWpCustomProperty.edges;
+  const properties = data.wpCustomProperty;
   return (
     <Layout>
       <Helmet>
@@ -29,7 +29,7 @@ const indexpage = ({data}) => {
         <Process processes={processes}/>
         <Testimonial />
         <Connect />
-        <Showcase/>
+        <Showcase properties={properties}/>
       </main>
     </Layout>
   )
@@ -72,42 +72,31 @@ query{
             }
             }
         },
-              allWpCustomProperty(sort: {fields: date, order: DESC}) {
-    edges {
+     wpCustomProperty(categories: {nodes: {elemMatch: {id: {eq: "dGVybToxNjM="}}}}) {
+    id
+    featuredImage {
       node {
-        title
-        id
-        uri
-        slug
-        content
-        featuredImage {
-          node {
-            altText
-            sourceUrl
-          }
-        }
-        googleMap {
-          apiKey
-          coords {
-            latitude
-            longitude
-          }
-          pin
-        }
-        propertyInfo {
-          location
-          pricing {
-            maxPrice
-            minPrice
-          }
-          propertyprops {
-            name
-            value
-          }
-        }
+        altText
+        sourceUrl
       }
     }
+    propertyInfo {
+      location
+      pricing {
+        minPrice
+      }
+      completionDate
+      beds {
+        title
+      }
+      floorPlan {
+        mediaItemUrl
+        title
+      }
+    }
+    uri
+    title
   }
-        }
+  }
 `
 export default indexpage

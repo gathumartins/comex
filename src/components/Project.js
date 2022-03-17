@@ -17,25 +17,25 @@ function Project({ properties}) {
                             <ul className="featList">
                             <li className="flex justify-between">
                                 <p className="flex gap-2 w-[150px]"><img className="h-6 w-6" src={beds} alt="featured bed" /> BEDS</p>
-                                <p>STUDIO, 1</p>
+                                    <p>{properties.propertyInfo.beds?.map((bed, i) => <span key={i}>{bed.title+ ", "}</span>)}</p>
                             </li>
                             <li className="flex justify-between">
                                     <p className="flex gap-2 w-[150px]"><img className="h-6 w-6" src={price} alt="featured bed" /> PRICE</p>
-                                    <p>FROM KSHS. 2,000,000</p>
+                                    <p>FROM KSHS. {properties.propertyInfo.pricing.minPrice.toLocaleString()}</p>
                             </li>
                             <li className="flex justify-between">
                                     <p className="flex gap-2 w-[150px]"><img className="h-6 w-6" src={floorplan} alt="featured bed" /> FLOORPLANS</p>
-                                 <p><a href="/" download="Floor Plan">View</a></p>
+                                    <p><a href={properties.propertyInfo.floorPlan.mediaItemUrl} download={properties.propertyInfo.floorPlan.title} rel="noreferrer" target="_blank">View</a></p>
                             </li>
                             </ul>
                             <div className="featuredLinks my-4">
-                            <Link to="/">Details</Link>
-                            <Link to="/properties">View More</Link>
+                                <Link to={`/properties${properties.uri}`} className="cursor-pointer">Details</Link>
+                            <Link to="/properties" className="cursor-pointer">View More</Link>
                             </div>
                         </div>
                     </div>
                     <figure className="object-contain">
-                        <img className="img-fluid" src="./imgs/projectimg.png" alt="Featured project" />
+                        <img className="img-fluid" src={properties.featuredImage.node.sourceUrl} alt={properties.featuredImage.node.altText} />
                     </figure>
                 </div>
             </Container>

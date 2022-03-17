@@ -3,7 +3,7 @@ import emailjs from '@emailjs/browser';
 import { Container, Modal} from 'react-bootstrap';
 import { MdClose } from 'react-icons/md';
 
-function Showcase() {
+function Showcase({properties}) {
     const handleClose = () => setShow(false);
     const handleShow = () => setShow(true);
     const [show, setShow] = useState(false);
@@ -11,7 +11,7 @@ function Showcase() {
     const isBrowser = typeof window !== "undefined"
     if (isBrowser) {
         const hideShowCase = () => {
-            if (window.scrollY >= 3000) {
+            if (window.scrollY >= 2700) {
                 setShowCase(true)
             } else {
                 setShowCase(false)
@@ -38,19 +38,19 @@ function Showcase() {
               <div className="features flex-grow grid grid-cols-2 sm:grid-cols-2 lg:grid-cols-4">
                 <div className="feature hidden md:inline">
                     <h6>YOU'RE VIEWING</h6>
-                    <h3>Nyayo View Suites</h3>
+                    <h3>{properties.title}</h3>
                 </div>
                 <div className="feature mx-auto">
                     <h6>PRICES FROM</h6>
-                    <h3>kshs. 2,000,000</h3>
+                      <h3>kshs. {properties.propertyInfo.pricing.minPrice.toLocaleString()}</h3>
                 </div>
                   <div className="feature hidden md:inline">
                     <h6>COMPLETION DATE</h6>
-                    <h3>Q1 2024</h3>
+                      <h3>{properties.propertyInfo.completionDate}</h3>
                 </div>
                   <div className="feature hidden md:inline">
                     <h6>LOCATION</h6>
-                    <h3>NAIROBI WEST</h3>
+                      <h3>{properties.propertyInfo.location}</h3>
                 </div>
               </div>
               <button className="register my-4 bg-comex-primary text-white text-uppercase p-2 border-2 border-comex-primary mx-auto" onClick={handleShow}>Register Interest</button>

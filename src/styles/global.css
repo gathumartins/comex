@@ -19,8 +19,8 @@
             url('../fonts/HelveticaUltraLight.woff') format('woff');
     }
 }
-p{
-    font-family: 'Spartan';
+p, ul, li, a, h1, h2, h3, h4, h5, h6, span, strong, em, i{
+    font-family: 'Spartan', sans-serif !important;
 }
 /* navigation */
 .scrolledNav {
@@ -374,14 +374,14 @@ border-color: #fff;
 /* feature showcase */
 .feature h6{
     margin-top:15px;
-    font-size: 14px;
+    font-size: 13px;
     font-weight: 400;
     text-transform: uppercase;
 }
 .feature h3{
     margin-top:12px;
     letter-spacing: 0.03em;
-    font-size: 22px;
+    font-size: 20px;
     text-transform: uppercase;
 }
 .featList li{
