@@ -1,4 +1,5 @@
 import React from 'react';
+import {Link} from 'gatsby';
 import { Container } from 'react-bootstrap';
 import beds from '../../static/imgs/beds.webp';
 import price from '../../static/imgs/price.webp';
@@ -28,8 +29,8 @@ function Project({ properties}) {
                             </li>
                             </ul>
                             <div className="featuredLinks my-4">
-                            <a href="/">Details</a>
-                            <a href="/properties">View More</a>
+                            <Link to="/">Details</Link>
+                            <Link to="/properties">View More</Link>
                             </div>
                         </div>
                     </div>

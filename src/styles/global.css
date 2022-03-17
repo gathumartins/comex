@@ -391,6 +391,16 @@ border-color: #fff;
 .featList li p:last-child{
     font-size:14px;
 }
+.popUpForm input, select, textarea{
+    box-shadow: none !important;
+}
+.popUpForm{
+    font-style: italic;
+    font-size:13px;
+}
+.myChexks{
+    max-width: 30%;
+}
 /* footer */
 .logo {
     margin-right: 0px;
