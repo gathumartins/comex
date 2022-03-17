@@ -27,6 +27,10 @@ function Project({ properties}) {
                                  <p><a href="/" download="Floor Plan">View</a></p>
                             </li>
                             </ul>
+                            <div className="featuredLinks my-4">
+                            <a href="/">Details</a>
+                            <a href="/properties">View More</a>
+                            </div>
                         </div>
                     </div>
                     <figure className="object-contain">

@@ -84,6 +84,20 @@ p{
 .featList li a:hover{
     color: #fff;
 }
+.featuredLinks a{
+    display: inline-block;
+    width: 150px;
+    padding:8px 15px;
+    background-color: #000000;
+    border: 1px solid #000000;
+    color: #fff;
+    margin-right: 15px;
+    text-align: center;
+}
+.featuredLinks a:hover{
+    background-color:transparent;
+    color: #000000;
+}
 /*  */
 .comexLine {
     position: absolute;
