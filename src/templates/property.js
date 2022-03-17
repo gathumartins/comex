@@ -36,11 +36,7 @@ function property({data}) {
     <Container fluid={"lg"} className="min-h-[300px] propLeft">
           <div dangerouslySetInnerHTML={{ __html: data.wpCustomProperty.content }}></div>
       <div className="propBtm md:flex justify-between gap-6">
-      <div className="propLinks w-[100%] md:w-[50%] py-7">
-              <Link to="/contact_us">Request More Info</Link>
-          <Link to="/schedule">Schedule a Showing</Link>
-      </div>
-      <div className="propShare w-[100%]  md:w-[50%] p-7">
+      <div className="propShare w-[100%]  md:w-[50%]">
       <h3>Share this Listing</h3>
       <ul className="flex justify-between gap-2 max-w-[250px] my-3">
                 <li><EmailShareButton url={ShareLink}><HiMail className="w-6 h-6"/></EmailShareButton></li>
@@ -53,11 +49,18 @@ function property({data}) {
       </div>
     </Container>
     <div className="propRight min-h-[300px] bg-comex-primary text-white">
-        <h1 className="text-3xl mb-3">KES: {data.wpCustomProperty.propertyInfo.pricing.minPrice} - KES: {data.wpCustomProperty.propertyInfo.pricing.maxPrice}</h1>
+          <h1 className="mb-3"><span className="text-xl">PRICES FROM</span> <br /> <span className="text-5xl mt-4">KSHS. {data.wpCustomProperty.propertyInfo.pricing.minPrice.toLocaleString()}</span></h1>
           <ul className="leading-2">
-          {data.wpCustomProperty.propertyInfo.propertyprops?.map((propInfo, i) => <li key={i}>{propInfo.name}: <span>{propInfo.value}</span></li>)}
+          {/*data.wpCustomProperty.propertyInfo.propertyprops?.map((propInfo, i) => <li key={i}>{propInfo.name}: <span>{propInfo.value}</span></li>)*/}
           </ul>
-          <a href={`https://test.comexhomes.ke/wp-content/uploads/2022/03/Comex-Homes-Nyayo-View-Suites.pdf`} className="bg-black text-comex-primary hover:text-white" target="_blank" rel="noreferrer" download="Nyayo View"> Download Profile</a>
+         <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
+            <a href={`https://test.comexhomes.ke/wp-content/uploads/2022/03/Comex-Homes-Nyayo-View-Suites.pdf`} className="bg-black text-comex-primary hover:text-white text-center" target="_blank" rel="noreferrer" download="floor plan"> View Floor Plan</a>
+            <a href={`https://test.comexhomes.ke/wp-content/uploads/2022/03/Comex-Homes-Nyayo-View-Suites.pdf`} className="bg-black text-comex-primary hover:text-white text-center" target="_blank" rel="noreferrer" download="Nyayo View"> Download Profile</a>
+         </div>
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 py-7">
+            <Link className="bg-black text-comex-primary hover:text-white text-center" to="/contact_us">Request More Info</Link>
+            <Link className="bg-black text-comex-primary hover:text-white text-center" to="/schedule">Schedule a Showing</Link>
+          </div>
     </div>
     </section>
     <Container fluid={"lg"} className="pt-14">

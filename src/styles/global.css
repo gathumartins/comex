@@ -467,7 +467,9 @@ border-color: #fff;
     .headerlarge {
         display: none;
     }
-
+    .propRight{
+        padding: 55px 15px;
+    }
     .mobileHeader {
         background-color: #fff;
         padding: 15px;
