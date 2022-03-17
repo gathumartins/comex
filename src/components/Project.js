@@ -12,8 +12,8 @@ function Project({ properties}) {
                 <div className="projectsInn grid grid-cols-1 sm:grid-cols-2 flex-col-reverse">
                     <div className="flex justify-around items-center">
                         <div className="featuredInn">
-                            <h1 className="text-4xl mb-3">NYAYO VIEW SUITES</h1>
-                            <h2 className="text-2xl mb-3">NAIROBI WEST</h2>
+                            <h1 className="text-4xl mb-3">{properties.title}</h1>
+                            <h2 className="text-2xl mb-3">{properties.propertyInfo.location}</h2>
                             <ul className="featList">
                             <li className="flex justify-between">
                                 <p className="flex gap-2 w-[150px]"><img className="h-6 w-6" src={beds} alt="featured bed" /> BEDS</p>
