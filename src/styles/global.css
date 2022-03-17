@@ -432,6 +432,7 @@ border-color: #fff;
         min-width: 600px;
         z-index: 8;
         padding: 55px;
+        max-height: 500px;
     }
     .propLeft{
         padding: 0 95px 0 64px;
