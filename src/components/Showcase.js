@@ -63,7 +63,7 @@ function Showcase() {
                   </div>
                   <p className="text-sm mt-3">We're excited to get started on working with you! Please tell us a little more about yourself so we can make the experience bespoke.</p>
               </Modal.Header>
-              <Modal.Body className="md:px-[80px]" scrollable>
+              <Modal.Body className="md:px-[80px]" scrollable="true">
                   <form ref={form} onSubmit={register} className="popUpForm">
                   <div className="mb-3">
                           <label htmlFor="name">Name<sup className="text-red-500">*</sup></label><br/>
