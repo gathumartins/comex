@@ -333,9 +333,9 @@ background-size: cover;
 .propRight ul li span{
     color: #fff;
 }
-.propRight a{
+.propRight a, .myBtn {
     margin-top:15px;
-    padding:10px 15px;
+    padding:15px;
     border: 2px solid transparent;
         display: inline-block;
         max-width: 300px;
@@ -347,6 +347,9 @@ background-size: cover;
 }
 .propRight a:hover{
 border-color: #fff;
+}
+.propRight .myBtn:hover {
+    border-color: #fff;
 }
 /* gallery */
 .css-zjq1i3{

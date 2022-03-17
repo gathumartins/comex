@@ -29,7 +29,7 @@ const indexpage = ({data}) => {
         <Process processes={processes}/>
         <Testimonial />
         <Connect />
-        <Showcase properties={properties}/>
+        <Showcase properties={properties} formProps={data.allWpCustomProperty.edges}/>
       </main>
     </Layout>
   )
@@ -71,6 +71,14 @@ query{
                 }
             }
             }
+        },
+        allWpCustomProperty {
+          edges {
+            node {
+              title
+              id
+            }
+          }
         },
      wpCustomProperty(categories: {nodes: {elemMatch: {id: {eq: "dGVybToxNjM="}}}}) {
     id

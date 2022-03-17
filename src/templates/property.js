@@ -6,6 +6,7 @@ import Layout from '../components/Layout';
 import Banner from '../components/Banner';
 import Connect from '../components/Connect';
 import MapComp from '../components/MapComp';
+import PopRegister from '../components/PopRegister';
 // import Property from '../components/Property';
 import {EmailShareButton, FacebookShareButton, LinkedinShareButton, TwitterShareButton, WhatsappShareButton} from "react-share";
 import { HiMail} from 'react-icons/hi';
@@ -49,16 +50,16 @@ function property({data}) {
       </div>
     </Container>
     <div className="propRight min-h-[300px] bg-comex-primary text-white">
-          <h1 className="mb-3"><span className="text-xl">PRICES FROM</span> <br /> <span className="text-5xl mt-4">KSHS. {data.wpCustomProperty.propertyInfo.pricing.minPrice.toLocaleString()}</span></h1>
+          <h1 className="mb-3"><span className="text-xl">PRICES FROM</span> <br /> <span className="text-3xl mt-6">KSHS. {data.wpCustomProperty.propertyInfo.pricing.minPrice.toLocaleString()}</span></h1>
           <ul className="leading-2">
           {/*data.wpCustomProperty.propertyInfo.propertyprops?.map((propInfo, i) => <li key={i}>{propInfo.name}: <span>{propInfo.value}</span></li>)*/}
           </ul>
          <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
-            <a href={`https://test.comexhomes.ke/wp-content/uploads/2022/03/Comex-Homes-Nyayo-View-Suites.pdf`} className="bg-black text-comex-primary hover:text-white text-center" target="_blank" rel="noreferrer" download="floor plan"> View Floor Plan</a>
-            <a href={`https://test.comexhomes.ke/wp-content/uploads/2022/03/Comex-Homes-Nyayo-View-Suites.pdf`} className="bg-black text-comex-primary hover:text-white text-center" target="_blank" rel="noreferrer" download="Nyayo View"> Download Profile</a>
+            <a href={data.wpCustomProperty.propertyInfo.floorPlan.mediaItemUrl} className="bg-black text-comex-primary hover:text-white text-center" target="_blank" rel="noreferrer" download={data.wpCustomProperty.propertyInfo.floorPlan.title}> View Floor Plan</a>
+            <a href={data.wpCustomProperty.propertyInfo.profile.mediaItemUrl} className="bg-black text-comex-primary hover:text-white text-center" target="_blank" rel="noreferrer" download={data.wpCustomProperty.propertyInfo.profile.title}> Download Profile</a>
          </div>
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 py-7">
-            <Link className="bg-black text-comex-primary hover:text-white text-center" to="/contact_us">Request More Info</Link>
+            <PopRegister properties={data.wpCustomProperty.propertyInfo.beds}/>
             <Link className="bg-black text-comex-primary hover:text-white text-center" to="/schedule">Schedule a Showing</Link>
           </div>
     </div>
@@ -112,8 +113,16 @@ export const query = graphql`
           }
         }
         propertyInfo {
+           floorPlan {
+            mediaItemUrl
+            title
+          }
+          beds {
+            title
+          }
            profile {
-            sourceUrl
+            mediaItemUrl
+            title
           }
           propertyGallery {
             width

@@ -1,26 +1,14 @@
 import React, { useRef, useState } from 'react';
+import {graphql, useStaticQuery } from 'gatsby';
 import emailjs from '@emailjs/browser';
-import { Container, Modal} from 'react-bootstrap';
+import { Modal } from 'react-bootstrap';
 import { MdClose } from 'react-icons/md';
 
-function Showcase({properties, formProps}) {
+function PopRegister({ properties}) {
     const handleClose = () => setShow(false);
     const handleShow = () => setShow(true);
     const [show, setShow] = useState(false);
-    const [showCase, setShowCase] = useState(false);
-    const isBrowser = typeof window !== "undefined"
-    if (isBrowser) {
-        const hideShowCase = () => {
-            if (window.scrollY >= 2700) {
-                setShowCase(true)
-            } else {
-                setShowCase(false)
-            }
-        }
-        window.addEventListener('scroll', hideShowCase);
-    }
     const form = useRef();
-
     const register = (e) => {
         e.preventDefault();
 
@@ -30,44 +18,36 @@ function Showcase({properties, formProps}) {
             }, (error) => {
                 console.log(error.text);
             });
-          e.target.reset();  
+        e.target.reset();
     };
+    const allProperties = useStaticQuery(graphql`
+     {
+         allWpCustomProperty {
+          edges {
+            node {
+              title
+              id
+            }
+          }
+        },
+     }
+    `) 
   return (
-      <div className={`sticky bottom-0 showCase min-h-12  bg-white py-1 ${showCase ? 'invisible' : 'visible '}`}>
-          <Container fluid={"lg"} className="flex justify-between flex-wrap gap-3 items-center">
-              <div className="features flex-grow grid grid-cols-2 sm:grid-cols-2 lg:grid-cols-4">
-                <div className="feature hidden md:inline">
-                    <h6>YOU'RE VIEWING</h6>
-                    <h3>{properties.title}</h3>
-                </div>
-                <div className="feature mx-auto">
-                    <h6>PRICES FROM</h6>
-                      <h3>kshs. {properties.propertyInfo.pricing.minPrice.toLocaleString()}</h3>
-                </div>
-                  <div className="feature hidden md:inline">
-                    <h6>COMPLETION DATE</h6>
-                      <h3>{properties.propertyInfo.completionDate}</h3>
-                </div>
-                  <div className="feature hidden md:inline">
-                    <h6>LOCATION</h6>
-                      <h3>{properties.propertyInfo.location}</h3>
-                </div>
-              </div>
-              <button className="register my-4 bg-comex-primary text-white text-uppercase p-2 border-2 border-comex-primary mx-auto" onClick={handleShow}>Register Interest</button>
-          </Container>
+    <React.Fragment>
+          <button className="bg-black text-comex-primary hover:text-white text-center myBtn" onClick={handleShow}>Register Interest</button>
           <Modal show={show} onHide={handleClose} backdrop="static" keyboard={false}>
               <Modal.Header className="text-center grid grid-cols-1 px-4 sticky">
                   <div className="w-full flex justify-between items-center">
                       <h1 className="flex-grow w-[90%] text-3xl">GET IN TOUCH</h1>
-                      <button onClick={handleClose}><span className="hidden">Close</span><MdClose  className="h-8 w-8"/></button>
+                      <button onClick={handleClose}><span className="hidden">Close</span><MdClose className="h-8 w-8" /></button>
                   </div>
                   <p className="text-sm mt-3">We're excited to get started on working with you! Please tell us a little more about yourself so we can make the experience bespoke.</p>
               </Modal.Header>
               <Modal.Body className="md:px-[80px]" scrollable="true">
                   <form ref={form} onSubmit={register} className="popUpForm">
-                  <div className="mb-3">
-                          <label htmlFor="name">Name<sup className="text-red-500">*</sup></label><br/>
-                          <input className="form-control mt-2 focus:border-comex-primary" type="text" name="name" id="name" required/>
+                      <div className="mb-3">
+                          <label htmlFor="name">Name<sup className="text-red-500">*</sup></label><br />
+                          <input className="form-control mt-2 focus:border-comex-primary" type="text" name="name" id="name" required />
                       </div>
                       <div className="mb-3">
                           <label htmlFor="email">Email<sup className="text-red-500">*</sup></label><br />
@@ -79,17 +59,17 @@ function Showcase({properties, formProps}) {
                       </div>
                       <div className="mb-3">
                           <label htmlFor="interest">What are you interested in?<sup className="text-red-500">*</sup></label><br />
-                          {properties.propertyInfo.beds?.map((propertyFeat, i) =>
+                          {properties?.map((propertyFeat, i) =>
                               <div key={i} className="flex space-between items-center gap-2 my-2">
                                   <input className="mt-2 w-5 h-5 focus:border-comex-primary" type="checkbox" name="interest" required value={propertyFeat.title} /><span className="mt-2">{propertyFeat.title}</span><br />
                               </div>
-                            )}
+                          )}
                       </div>
                       <div className="mb-3">
                           <label htmlFor="property">Property Interested In<sup className="text-red-500">*</sup></label><br />
                           <select className="form-control mt-2 focus:border-comex-primary" name="property" id="property" required>
                               <option value="" selected disabled hidden>Select</option>
-                              {formProps?.map((property) => <option key={property.node.id} value={property.node.title}>{property.node.title}</option>)}
+                              {allProperties.allWpCustomProperty.edges?.map((property) => <option key={property.node.id} value={property.node.title}>{property.node.title}</option>)}
                           </select>
                       </div>
                       <div className="mb-3">
@@ -100,8 +80,8 @@ function Showcase({properties, formProps}) {
                   </form>
               </Modal.Body>
           </Modal>
-      </div>
+    </React.Fragment>
   )
 }
 
-export default Showcase;
+export default PopRegister;
