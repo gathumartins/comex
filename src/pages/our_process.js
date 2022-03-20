@@ -101,7 +101,7 @@ function ourProcess({data}) {
 }
 export const query = graphql`
 query{
-        allWpCustomProcess(sort: {order: DESC, fields: date}){
+        allWpCustomProcess(sort: {order: ASC, fields: date}){
             nodes {
             content
             id
