@@ -4,6 +4,14 @@ module.exports = {
     siteUrl: `https://comexhomes.ke/`
   },
   plugins: [
+    {
+      resolve: 'gatsby-plugin-google-analytics',
+      options: {
+        "trackingId": "G-Z8GLRFK8FZ",
+        head: true,
+        anonymize: true,
+      }
+    }, 
     `gatsby-plugin-postcss`,
     `gatsby-plugin-image`,
     `gatsby-plugin-sharp`,
@@ -14,12 +22,6 @@ module.exports = {
         "url": "https://test.comexhomes.ke/graphql"
       }
     },
-    {
-      resolve: 'gatsby-plugin-google-analytics',
-      options: {
-        "trackingId": "G-KN7G670PSF"
-      }
-    }, 
     "gatsby-plugin-image", "gatsby-plugin-react-helmet", "gatsby-plugin-sitemap", {
       resolve: 'gatsby-plugin-manifest',
       options: {
