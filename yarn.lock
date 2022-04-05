@@ -5524,6 +5524,14 @@
     "minimatch" "3.0.4"
     "web-vitals" "^1.1.2"
 
+"gatsby-plugin-google-gtag@^4.11.0":
+  "integrity" "sha512-OTjMiv9AvYYpGU9Y8gvFq3GkK5eIW1lXT4Xt2zZOn8ocyL+mOynAfSEAl6Pl5L7rVMdZ3allMTJbCzwyaj2iOQ=="
+  "resolved" "https://registry.npmjs.org/gatsby-plugin-google-gtag/-/gatsby-plugin-google-gtag-4.11.0.tgz"
+  "version" "4.11.0"
+  dependencies:
+    "@babel/runtime" "^7.15.4"
+    "minimatch" "^3.0.4"
+
 "gatsby-plugin-google-tagmanager@^4.11.1":
   "integrity" "sha512-K96GaNZg5UlHYXBhqSB8flOr99bIb0DyLJ657xCpWYZhWA4x+M+m+d7RcklsGE0RWD27Vyp4wdBR6hSMsW8Vzw=="
   "resolved" "https://registry.npmjs.org/gatsby-plugin-google-tagmanager/-/gatsby-plugin-google-tagmanager-4.11.1.tgz"

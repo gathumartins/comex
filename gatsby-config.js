@@ -5,14 +5,20 @@ module.exports = {
   },
   plugins: [
     {
-      resolve: 'gatsby-plugin-google-analytics',
+      resolve: `gatsby-plugin-google-gtag`,
       options: {
-        "trackingId": "UA-224978776-1",
-        "measurementId":"G-Z8GLRFK8FZ",
-        head: true,
-        anonymize: true,
-      }
-    }, 
+        // You can add multiple tracking ids and a pageview event will be fired for all of them.
+        trackingIds: [
+          "G-Z8GLRFK8FZ", // Google Analytics / GA
+          "UA-224978776-1", // Google Ads / Adwords / AW
+        ],
+        // This object is used for configuration specific to this plugin
+        pluginConfig: {
+          // Puts tracking script in the head instead of the body
+          head: true,
+        },
+      },
+    },
     `gatsby-plugin-postcss`,
     `gatsby-plugin-image`,
     `gatsby-plugin-sharp`,
