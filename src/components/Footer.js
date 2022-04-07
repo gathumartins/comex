@@ -1,5 +1,6 @@
 import React from 'react';
-import { Link } from "gatsby";
+import { Helmet } from "react-helmet";
+import {Link } from "gatsby";
 import { Container } from 'react-bootstrap';
 import footlogo from '../../static/imgs/footlogo.png';
 import { FaFacebookF, FaInstagram, FaTwitter, FaLinkedinIn, FaYoutube } from 'react-icons/fa';
@@ -10,6 +11,9 @@ function Footer() {
     const yyyy = year.getFullYear();
     return (
         <footer className="pt-14 pb-3 bg-comex-primary">
+            <Helmet>
+                <script type="text/javascript" id="hs-script-loader" async defer src="//js-eu1.hs-scripts.com/25735940.js"></script>
+            </Helmet>
             <Container fluid={"lg"}>
                 <div className="md:flex justify-between footerTop">
                     <div className="w-[100%] md:max-w-[250px] logo">
