@@ -8,7 +8,7 @@ import WhyHome from "../components/WhyHome";
 import Process from "../components/Process";
 import Testimonial from "../components/Testimonial";
 import Showcase from "../components/Showcase";
-import Connect from "../components/Connect";
+// import Connect from "../components/Connect";
 
 // markup
 const indexpage = ({data}) => {
@@ -28,7 +28,6 @@ const indexpage = ({data}) => {
         <WhyHome vidUrl={data.wpPage.whyComex.video} content={data.wpPage.content} titles={data.wpPage.whyComex.titles}/>
         <Process processes={processes}/>
         <Testimonial />
-        <Connect />
         <Showcase properties={properties} formProps={data.allWpCustomProperty.edges}/>
       </main>
     </Layout>

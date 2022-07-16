@@ -2,7 +2,7 @@ import React from 'react';
 import {Helmet} from 'react-helmet';
 import {graphql} from 'gatsby';
 import Layout from '../components/Layout';
-import Connect from '../components/Connect';
+// import Connect from '../components/Connect';
 import WhyAbout from '../components/WhyAbout';
 import Banner from '../components/Banner';
 import WhyMivi from '../components/WhyMivi';
@@ -18,7 +18,7 @@ function whyComex({data}) {
             <Banner banner={data.wpPage.featuredImage.node.sourceUrl} altTxt={data.wpPage.featuredImage.node.altText} slug={data.wpPage.slug} slugLabel={data.wpPage.title}/>
             <WhyAbout vidUrl={data.wpPage.whyComex.video} whySub={data.wpPage.whyComex.subtitle} content={data.wpPage.content}/>
             <WhyMivi coInfo={data.wpPage.companyInfo}/>
-            <Connect />
+           { /*<Connect />*/}
         </Layout>
     );
 }

@@ -4,7 +4,7 @@ import {Link, graphql} from 'gatsby';
 import { Container } from 'react-bootstrap';
 import Layout from '../components/Layout';
 import Banner from '../components/Banner';
-import Connect from '../components/Connect';
+// import Connect from '../components/Connect';
 import MapComp from '../components/MapComp';
 import PopRegister from '../components/PopRegister';
 // import Property from '../components/Property';
@@ -87,7 +87,7 @@ function property({data}) {
           <Property />
         </Container> 
     </section> */}
-    <Connect />
+    {/*<Connect />*/}
     </Layout>
   )
 }

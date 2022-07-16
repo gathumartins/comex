@@ -6,7 +6,7 @@ import { graphql } from 'gatsby';
 import { Container } from 'react-bootstrap';
 import Layout from '../components/Layout';
 import Banner from '../components/Banner';
-import Connect from '../components/Connect';
+// import Connect from '../components/Connect';
 // import Property from '../components/Property';
 import ProcessTwo from '../components/ProcessTwo';
 
@@ -95,7 +95,7 @@ function ourProcess({data}) {
                 </Container>
             </section>
         */}
-            <Connect />
+        {/*<Connect />*/}
         </Layout>
     );
 }

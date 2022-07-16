@@ -12,7 +12,7 @@ function Footer() {
     return (
         <footer className="pt-14 pb-3 bg-comex-primary">
             <Helmet>
-                <script type="text/javascript" id="hs-script-loader" async defer src="//js-eu1.hs-scripts.com/25735940.js"></script>
+                <script type="text/javascript" id="hs-script-loader" async defer src="//js-eu1.hs-scripts.com/25735940.js"></script>ç
             </Helmet>
             <Container fluid={"lg"}>
                 <div className="md:flex justify-between footerTop">

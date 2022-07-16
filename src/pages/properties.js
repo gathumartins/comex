@@ -5,7 +5,7 @@ import { graphql } from 'gatsby';
 // import ReactPaginate from 'react-paginate';
 import Layout from '../components/Layout';
 import Banner from '../components/Banner';
-import Connect from '../components/Connect';
+// import Connect from '../components/Connect';
 import PropertiesSearch from '../components/PropertiesSearch';
 
 function properties({data}) {
@@ -23,7 +23,7 @@ function properties({data}) {
             <Container fluid={"lg"}>
             </Container>
             </section>*/}
-            <Connect />
+           { /*<Connect />*/}
         </Layout>
     );
 }
