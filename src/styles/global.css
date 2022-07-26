@@ -213,6 +213,7 @@ width: 130px;
 /* process page */
 .processMain{
     min-height:680px;
+    padding-bottom: 20px;
 }
 .processMain:before{
 content: '';

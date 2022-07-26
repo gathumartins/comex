@@ -5,6 +5,14 @@ module.exports = {
   },
   plugins: [
     {
+      resolve: "gatsby-plugin-hubspot",
+      options: {
+        trackingCode: "1234567",
+        respectDNT: false,
+        productionOnly: true,
+      },
+    },
+    {
       resolve: `gatsby-plugin-google-gtag`,
       options: {
         // You can add multiple tracking ids and a pageview event will be fired for all of them.
