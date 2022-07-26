@@ -53,7 +53,8 @@ function Showcase({properties, formProps}) {
                       <h3>{properties.propertyInfo.location}</h3>
                 </div>
               </div>
-              <button className="register my-4 bg-comex-primary text-white text-uppercase p-2 border-2 border-comex-primary mx-auto" onClick={handleShow}>Register Interest</button>
+              <a href="https://share-eu1.hsforms.com/1PWrim3F1TeieOy8zdLFTFQfblz8" target="_blank" rel="noreferrer" className="register my-4 bg-comex-primary text-white text-uppercase p-2 border-2 border-comex-primary mx-auto">Register Interest</a>
+              <button className="register my-4 bg-comex-primary text-white text-uppercase p-2 border-2 border-comex-primary mx-auto hidden" onClick={handleShow}>Register Interest</button>
           </Container>
           <Modal show={show} onHide={handleClose} backdrop="static" keyboard={false}>
               <Modal.Header className="text-center grid grid-cols-1 px-4 sticky">

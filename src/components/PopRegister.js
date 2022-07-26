@@ -34,8 +34,8 @@ function PopRegister({ properties}) {
     `) 
   return (
     <React.Fragment>
-          <button className="bg-black text-comex-primary hover:text-white text-center myBtn" onClick={handleShow}>Register Interest</button>
-          <Modal show={show} onHide={handleClose} backdrop="static" keyboard={false}>
+          <a href="https://share-eu1.hsforms.com/1PWrim3F1TeieOy8zdLFTFQfblz8" target="_blank" rel="noreferrer"className="bg-black text-comex-primary hover:text-white text-center myBtn hidden">Register Interest</a>
+          <Modal show={show} onHide={handleClose} backdrop="static" keyboard={false} onClick={handleShow}>
               <Modal.Header className="text-center grid grid-cols-1 px-4 sticky">
                   <div className="w-full flex justify-between items-center">
                       <h1 className="flex-grow w-[90%] text-3xl">GET IN TOUCH</h1>
